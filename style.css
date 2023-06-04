@@ -1,6 +1,6 @@
 body {
   font-family: 'Raleway', sans-serif;
-  background: rgba(242, 242, 242, .6);
+  background: rgba(48, 93, 57, 0.6);
   margin: 0;
 }
 
@@ -10,7 +10,7 @@ body {
 
 /*NAVBAR*/
 .navbar {
-  background-color: #31b0d5;
+  background-color: #218526;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -19,8 +19,8 @@ body {
 }
 
 .navbar a {
-  font-weight: 200;
-  color: white;
+  font-weight: 400;
+  color: rgb(12, 7, 34);
   padding: 14px 16px;
   text-decoration: none;
 }
@@ -35,7 +35,7 @@ body {
 /*JUMBOTRON*/
 .jumbotron {
   height: 100vh; /*height to 100% of view height*/
-  background: #31b0d5; /*background color to blue*/
+  background: #122d13; /*background color to blue*/
   margin-bottom: 0; /*no bottom margin*/
 
   display: flex;
@@ -54,8 +54,8 @@ body {
 .jumbotron-text h1 {
   /*YOUR NAME*/
   text-transform: uppercase;
-  font-weight: 800;
-  font-size: 3em;
+  font-weight: 600;
+  font-size: 2em;
   margin-bottom: 0;
 }
 
@@ -76,7 +76,7 @@ body {
 
 .social {
   font-size: 2em;
-  color: white;
+  color: rgb(14, 3, 30);
   padding: 20px;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 #down-arrow a {
-  color: white;
+  color: rgb(11, 6, 28);
 }
 
 /*CONTENT*/
@@ -105,7 +105,7 @@ body {
 }
 
 .white {
-  background: white;
+  background: rgba(48, 93, 57, 0.6);
 }
 
 .side-content {
@@ -137,7 +137,7 @@ body {
 h2 {
   font-weight: 200;
   font-size: 2rem;
-  color: #31b0d5;
+  color: #080b1f;
   text-transform: uppercase;
   text-align: center;
 }
@@ -151,15 +151,17 @@ h2 {
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(48, 93, 57);
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
   margin-bottom: 30px;
 }
 
 .card-header {
+  font-weight: 400;
+  font-size: 1em;
   padding: .75rem 1.25rem;
-  background-color: white;
+  background-color: rgb(48, 93, 57);
   border-bottom: 1px solid rgba(0,0,0,.075);
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
@@ -173,7 +175,7 @@ h2 {
 h4 {
   margin: 0;
   font-weight: 400;
-  color: grey;
+  color: rgb(6, 6, 27);
 }
 
 .job-title {
@@ -184,7 +186,7 @@ h4 {
 .project-card {
   display: flex;
   flex-direction: row;
-  background-color: white;
+  background-color: rgb(48, 93, 57);
   border: 1px solid rgba(0,0,0,.125);
   border-radius: 5px;
   margin-bottom: 30px;
@@ -220,7 +222,7 @@ h4 {
   display: inline-block;
   margin: 7px;
   padding: 5px 10px;
-  color: white;
+  color: rgb(48, 93, 57);
   background: #31b0d5;
   list-style: none;
   cursor: default;
@@ -272,4 +274,10 @@ h4 {
 
 .white-text {
   color: white;
+}
+
+.link_ {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
 }
