@@ -1,14 +1,11 @@
----
-title: "Paper Title Number 2"
+<!-- ---
+title: "Symbolic Imitation Learning: From Black-Box to Explainable Driving Policies"
 collection: publications
 category: manuscripts
-permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
----
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+permalink: /publication/2025-symbolic-imitation-applied-sci
+excerpt: "Introduces a symbolic imitation learning approach using inductive logic programming to extract explainable behavioral rules from human demonstrations in highway driving."
+date: 2025-03-20
+venue: "Journal of Applied Sciences, 2025 (Under Review)"
+paperurl: "https://github.com/iman-sharifi-ghb/Symbolic-Imitation-Learning"
+citation: "I. Sharifi, M. Yildirim, and S. Fallah. (2025). \"Symbolic Imitation Learning: From Black-Box to Explainable Driving Policies.\" <i>Journal of Applied Sciences</i>. (Under Review)."
+--- -->

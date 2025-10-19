@@ -1,13 +1,11 @@
----
-title: "Paper Title Number 4"
+<!-- ---
+title: "A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and Small Unmanned Aerial Systems (sUAS)"
 collection: publications
 category: conferences
-permalink: /publication/2024-02-17-paper-title-number-4
-excerpt: 'This paper is about fixing template issue #693.'
-date: 2024-02-17
-venue: 'GitHub Journal of Bugs'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-citation: 'Your Name, You. (2024). &quot;Paper Title Number 3.&quot; <i>GitHub Journal of Bugs</i>. 1(3).'
----
-
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+permalink: /publication/2026-utm-security-survey
+excerpt: "Comprehensive survey of cybersecurity challenges and solutions in UAS Traffic Management and small Unmanned Aerial Systems, with emphasis on communication, authentication, and operational vulnerabilities."
+date: 2026-01-05
+venue: "AIAA SciTech Forum, 2026"
+paperurl: "https://arxiv.org/pdf/2307.01312"
+citation: "I. Sharifi, M. Ghazanfari, A. Taye, P. Wei, G. Biswas, B. Ward, X. Koutsoukos, M. Ghasemi, V. Gupta, A. Chen, A. Shirkhodaei, S. Hasan, I. Amundson, F. Fotiadis, U. Topcu, et al. (2026). \"A Survey of Security Challenges and Solutions for UAS Traffic Management (UTM) and small Unmanned Aerial Systems (sUAS).\" <i>AIAA SciTech Forum</i>, 2026."
+--- -->
