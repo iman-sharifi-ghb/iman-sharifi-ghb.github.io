@@ -1,20 +1,18 @@
 ---
-title: "Teaching experience 2"
+title: "Advanced Applied Mathematics"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+type: "Graduate Course Teaching Assistant"
+permalink: /teaching/2022-spring-advanced-math
+venue: "Sharif University of Technology, Department of Mechanical Engineering"
+date: 2022-03-01
+location: "Tehran, Iran"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+I worked as a **Teaching Assistant** for the graduate-level course **Advanced Applied Mathematics** at the Department of Mechanical Engineering, **Sharif University of Technology**.  
 
-Heading 1
-======
+Responsibilities:
+- Assisted in delivering tutorials and mathematical derivations  
+- Supported students with analytical methods for differential equations and control theory applications  
+- Helped evaluate assignments and final reports  
 
-Heading 2
-======
-
-Heading 3
-======
+The course covered advanced topics such as partial differential equations, eigenvalue problems, and analytical methods used in control and dynamic systems.

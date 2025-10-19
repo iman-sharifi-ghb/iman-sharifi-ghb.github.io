@@ -1,20 +1,18 @@
 ---
-title: "Teaching experience 1"
+title: "Fuzzy Systems & Control"
 collection: teaching
-type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+type: "Graduate Course Teaching Assistant"
+permalink: /teaching/2022-spring-fuzzy-systems
+venue: "Sharif University of Technology, Department of Mechanical Engineering"
+date: 2022-03-01
+location: "Tehran, Iran"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+I served as a **Teaching Assistant** for the graduate course **Fuzzy Systems & Control** at the Department of Mechanical Engineering, **Sharif University of Technology**.  
 
-Heading 1
-======
+My responsibilities included:
+- Assisting the instructor with course materials and problem sessions  
+- Designing and grading homework and midterm assignments  
+- Supporting student projects related to fuzzy control system design  
 
-Heading 2
-======
-
-Heading 3
-======
+This course introduced fuzzy logic principles and their applications in control engineering, including rule-based reasoning and fuzzy inference systems.
