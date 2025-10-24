@@ -1,5 +1,5 @@
 <!-- ---
-title: "sUAS Separation Assurance with Mixed Aircraft Equipage and Heterogeneous Tactical Deconfliction Policies"
+title: "Separation Assurance between Heterogeneous Fleets of Small Unmanned Aerial Systems via Multi-Agent Reinforcement Learning"
 collection: publications
 category: conferences
 permalink: /publication/2026-heterogeneous-deconfliction-itsc
