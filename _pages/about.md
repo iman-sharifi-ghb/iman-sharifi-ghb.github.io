@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a **Ph.D. student in Mechanical and Aerospace Engineering** at **The George Washington University**, where I work with [Prof. Peng Wei](https://web.seas.gwu.edu/pwei/) in the **Intelligent Autonomous Systems Lab (IASL)**. 
+I am a **Ph.D. student in Mechanical and Aerospace Engineering** at **George Washington University**, where I work with [Dr. Peng Wei](https://web.seas.gwu.edu/pwei/) at the **Intelligent Autonomous Systems Lab (IASL)**. 
  
 My research lies at the intersection of **Control**, **Optimization**, **Neuro-Symbolic Artificial Intelligence**, **Safe Multi-Agent Reinforcement Learning**, and **Autonomous Systems**. I am broadly interested in developing **interpretable and verifiable AI systems** for safety-critical applications such as **airspace management**, **advanced air mobility (AAM)**, and **autonomous driving**. My current work is funded by by **NASA** under the **University Leadership Initiative (ULI)**.
 
-I have also conducted research as a **Visiting Researcher** at the **Connected and Automated Vehicles Lab (CAV-Lab)**, University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using **Neuro-Symbolic Reinforcement Learning**. My works have been published in venues such as *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *IJCAI*, and under review at *AAAI*.
+I have also conducted research as a **Visiting Researcher** at the **Connected and Automated Vehicles Lab (CAV-Lab)**, University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using **Neuro-Symbolic Reinforcement Learning**. My works have been published in venues such as *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *IJCAI*, *Applied Sciences*, and *AIAA Scitech Forum*.
 
 ---
 
@@ -35,7 +35,7 @@ I have also conducted research as a **Visiting Researcher** at the **Connected a
 
 ### Opportunities
 I am **actively seeking research internship opportunities** in 2025–2026 related to **AI, autonomous systems, or reinforcement learning** in academia, research labs, or industry.  
-If you are interested in collaboration or potential internship opportunities, feel free to reach out at [iman.sharifi.edu@gmail.com](mailto:iman.sharifi.edu@gmail.com).
+If you are interested in collaboration or potential internship opportunities, feel free to reach out via [iman.sharifi.edu@gmail.com](mailto:iman.sharifi.edu@gmail.com).
 
 ---
 
