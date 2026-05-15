@@ -43,8 +43,7 @@ I would love to collaborate on new projects related to my field of research: rei
 ---
 
 ### Opportunities
-I am actively seeking research internship opportunities in 2026–2027 related to AI, autonomous systems, or reinforcement learning in academia, research labs, or industry.  
-If you are interested in collaboration or potential internship opportunities, feel free to reach out via [i.sharifi@gwu.edu](mailto:i.sharifi@gwu.edu).
+I am actively seeking research internship opportunities in 2026–2027 related to AI, autonomous systems, or reinforcement learning in academia, research labs, or industry. If you are interested in collaboration or have potential internship opportunities, feel free to reach out via [i.sharifi@gwu.edu](mailto:i.sharifi@gwu.edu).
 
 ---
 
