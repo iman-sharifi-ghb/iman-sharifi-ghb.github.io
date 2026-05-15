@@ -6,6 +6,6 @@ permalink: /publication/2025-agriculture-drones-smartagtech
 # excerpt: "A comprehensive review of agricultural spraying drones, covering drone architectures, control mechanisms, droplet deposition, and path planning techniques."
 date: 2025-05-01
 venue: "Smart Agricultural Technology"
-paperurl: "https://doi.org/10.1016/j.atech.2025.101519"
+# paperurl: "https://doi.org/10.1016/j.atech.2025.101519"
 # citation: "A. Talaeizadeh, I. Sharifi, Sh. G. Samani, and A. Alasty. (2025). \"Agricultural Spraying Drones: A Comprehensive Review.\" <i>Smart Agricultural Technology</i>, 2025."
 ---
