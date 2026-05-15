@@ -41,6 +41,7 @@ If you are interested in collaboration or potential internship opportunities, fe
 
 ### News
 - **[2026/04]** One paper has been accepted at 2026 IEEE 29th International Conference on Intelligent Transportation Systems (ITSC), Naples, Italy: "*Separation Assurance between Heterogeneous Fleets of Small Unmanned Aerial Systems via Multi-Agent Reinforcement Learning*".
+- **[2026/04]** I defended my Doctoral Qualifying Exam (DQE) and became a PhD Candidate at George Washington University.
 - **[2026/03]** One paper has been accepted at the Proceedings of Computer Vision and Pattern Recognition (CVPR) Workshops 2026, Denver, Colorado, USA: "*Fine-Tuning Large Language Models for Cooperative Tactical Deconfliction of Small Unmanned Aerial Systems*".
 - **[2026/03]** I got admitted as a visiting student researcher to join SISL lab at Stanford University during Summer 2026.
 - **[2025/10]** Published *Agricultural Spraying Drones: A Comprehensive Review* at *Smart Agricultural Technology*.
