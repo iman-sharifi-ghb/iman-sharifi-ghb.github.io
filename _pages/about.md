@@ -9,9 +9,9 @@ redirect_from:
 
 <div class="about-justify" markdown="1">
 
-I am a PhD Candidate in Mechanical and Aerospace Engineering at [George Washington University](https://www.gwu.edu/), Washington DC, USA, where my research lies at the intersection of control, optimization, and decision-making. In particular, I work on **multi-agent reinforcement learning**, **neuro-symbolic artificial intelligence**, and **large language models (LLMs)**. I am broadly interested in developing interpretable and verifiable AI systems for safety-critical applications such as unmanned aerial systems (UAS) traffic management (UTM), advanced air mobility (AAM), and autonomous driving. My current PhD program is funded by [*National Aeronautics and Space Administration (NASA)*](https://www.nasa.gov/)'s university leadership initiative (ULI).
+I am a Ph.D. Candidate in Mechanical and Aerospace Engineering at [George Washington University](https://www.gwu.edu/), Washington DC, USA, where my research lies at the intersection of control, optimization, and decision-making. In particular, I work on **multi-agent reinforcement learning**, **neuro-symbolic artificial intelligence**, and **large language models (LLMs)**. I am broadly interested in developing interpretable and verifiable AI systems for safety-critical applications such as unmanned aerial systems (UAS) traffic management (UTM), advanced air mobility (AAM), and autonomous driving. My current Ph.D. program is funded by [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) university leadership initiative (ULI).
 
-I will be joining [*Stanford Intelligent System Laboratory (SISL)*](https://sisl.stanford.edu/) at **Stanford University**, the Department of Aeronautics and Astronautics, as a visiting student researcher (VSR), to conduct research on safeguarding LLMs/VLMs using retrieval-augmented generations (RAGs) in aviation applications from late May to early October, 2026. I have also conducted research as a visiting student researcher at the [*Connected and Automated Vehicles Lab (CAV-Lab)*](https://www.cav-lab.io/), University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using neuro-symbolic reinforcement learning in 2023. 
+Currently, I am a visiting student researcher in [Stanford Intelligent System Laboratory (SISL)](https://sisl.stanford.edu/) at **Stanford University**, Department of Aeronautics and Astronautics, where I conduct research on safeguarding LLMs/VLMs using retrieval-augmented generations (RAGs) in aviation applications. I have also conducted research as a visiting student researcher at the [Connected and Automated Vehicles Lab (CAV-Lab)](https://www.cav-lab.io/), University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using neuro-symbolic reinforcement learning in 2023. 
 
 To date, my works have been published in venues such as *IEEE International Conference on Intelligent Transportation Systems (ITSC)*, *Computer Vision and Pattern Recognition (CVPR) Workshops*, *International Joint Conference on Artificial Intelligence (IJCAI)*, *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *Applied Sciences*, and *AIAA Scitech Forum*.
 
@@ -29,16 +29,18 @@ I would love to collaborate on new projects related to my field of research: rei
 ---
 
 ### News
+- **[2026/06]** Officially joined the Stanford Intelligent Systems Laboratory (SISL) at the Department of Aeronautics & Astronautics in Stanford University.
+- **[2026/06]** Attended CVPR 2026 conference in Denver, Colorado, and presented our poster (see the talks tab for more details).
 - **[2026/04]** One paper has been accepted at 2026 IEEE 29th International Conference on Intelligent Transportation Systems (ITSC), Naples, Italy: "*Separation Assurance between Heterogeneous Fleets of Small Unmanned Aerial Systems via Multi-Agent Reinforcement Learning*".
-- **[2026/04]** I defended my Doctoral Qualifying Exam (DQE) and became a PhD Candidate at George Washington University.
+- **[2026/04]** Defended my Doctoral Qualifying Exam (DQE) and became a Ph.D. Candidate at George Washington University.
 - **[2026/03]** One paper has been accepted at the Proceedings of Computer Vision and Pattern Recognition (CVPR) Workshops 2026, Denver, Colorado, USA: "*Fine-Tuning Large Language Models for Cooperative Tactical Deconfliction of Small Unmanned Aerial Systems*".
-- **[2026/03]** I got admitted as a visiting student researcher to join SISL lab at Stanford University during Summer 2026.
+- **[2026/03]** Got admitted as a visiting student researcher to join SISL lab at Stanford University during Summer 2026.
 - **[2025/10]** Published *Agricultural Spraying Drones: A Comprehensive Review* at *Smart Agricultural Technology*.
 - **[2025/09]** Two papers accepted at *AIAA SciTech Forum 2026* on UTM and AAM cybersecurity. 
 - **[2025/09]** Published *Towards Safe Autonomous Driving Policies using a Neuro-Symbolic Deep Reinforcement Learning Approach* in *Transportation Research Record (TRR)*. 
 - **[2025/08]** Submitted *ANDRE: An Attention-Based Neurosymbolic Differentiable Rule Extractor* to AAAI 2025. 
 - **[2025/08]** Published *Integrating Neurosymbolic AI in Advanced Air Mobility: A Comprehensive Survey* at *Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence (IJCAI)*.
-- **[2024]** Joined the Intelligent Autonomous Systems Lab (IASL) at The George Washington University as a Ph.D. student.  
+- **[2024/09]** Officially Joined the Intelligent Autonomous Systems Lab (IASL) at The George Washington University as a Ph.D. student.  
 
 ---
 
