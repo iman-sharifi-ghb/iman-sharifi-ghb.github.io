@@ -2,6 +2,8 @@
 title: "Differential Equations"
 collection: teaching
 type: "Undergraduate Course Teaching Assistant"
+level: "Undergraduate"
+excerpt: "Undergraduate course on modeling and solving ordinary differential equations in engineering dynamics, with tutorials on analytical and numerical methods."
 permalink: /teaching/2019-fall-differential-equations
 venue: "K. N. Toosi University of Technology, Department of Aerospace Engineering"
 date: 2019-11-01

@@ -2,6 +2,8 @@
 title: "Automatic Control"
 collection: teaching
 type: "Undergraduate Course Teaching Assistant"
+level: "Undergraduate"
+excerpt: "Undergraduate course on classical control theory — transfer functions, stability analysis, and PID design, with problem-solving sessions and laboratory demonstrations."
 permalink: /teaching/2021-fall-automatic-control
 venue: "Sharif University of Technology, Department of Mechanical Engineering"
 date: 2021-11-01

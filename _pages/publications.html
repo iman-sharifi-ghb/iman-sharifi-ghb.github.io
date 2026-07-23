@@ -5,32 +5,67 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my papers on my <a href="{{site.author.googlescholar}}">Google Scholar</a> profile.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
+<p class="pub-intro">
+  {% if site.author.googlescholar %}A complete and up-to-date list is also available on my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.{% endif %}
+</p>
+
 {% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+  {% for category in site.publication_category %}
+    {% assign catkey = category[0] %}
+    {% assign posts = site.publications | where: "category", catkey | sort: "date" | reverse %}
+    {% if posts.size > 0 %}
+      <section class="pub-group">
+        <div class="pub-group__head">
+          <h2>{{ category[1].title }}</h2>
+          <span class="pub-group__count">{{ posts.size }}</span>
+        </div>
+        <div class="pub-list">
+          {% for post in posts %}
+            {% if post.paperurl %}{% assign titlelink = post.paperurl %}{% else %}{% assign titlelink = post.url | prepend: base_path %}{% endif %}
+            <article class="pub-card">
+              <div class="pub-card__badge">
+                <span class="pub-card__venue">{{ post.venue_short | default: post.venue }}</span>
+                <span class="pub-card__year">{{ post.date | date: "%Y" }}</span>
+              </div>
+              <div class="pub-card__main">
+                <h3 class="pub-card__title"><a href="{{ titlelink }}">{{ post.title }}</a></h3>
+                {% if post.venue %}<div class="pub-card__venue-full">{{ post.venue }}</div>{% endif %}
+                {% if post.excerpt %}<p class="pub-card__desc">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+                <div class="pub-card__actions">
+                  {% if post.paperurl %}<a class="pub-chip pub-chip--primary" href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
+                  {% if post.slidesurl %}<a class="pub-chip" href="{{ post.slidesurl }}"><i class="fas fa-fw fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
+                  <a class="pub-chip" href="{{ post.url | prepend: base_path }}"><i class="fas fa-fw fa-circle-info" aria-hidden="true"></i> Details</a>
+                </div>
+                {% if post.citation %}
+                <details class="pub-cite">
+                  <summary>Cite</summary>
+                  <p class="pub-cite__text">{{ post.citation }}</p>
+                </details>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
   {% endfor %}
 {% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+  <div class="pub-list">
+    {% for post in site.publications reversed %}
+      {% if post.paperurl %}{% assign titlelink = post.paperurl %}{% else %}{% assign titlelink = post.url | prepend: base_path %}{% endif %}
+      <article class="pub-card">
+        <div class="pub-card__badge">
+          <span class="pub-card__venue">{{ post.venue_short | default: post.venue }}</span>
+          <span class="pub-card__year">{{ post.date | date: "%Y" }}</span>
+        </div>
+        <div class="pub-card__main">
+          <h3 class="pub-card__title"><a href="{{ titlelink }}">{{ post.title }}</a></h3>
+          {% if post.venue %}<div class="pub-card__venue-full">{{ post.venue }}</div>{% endif %}
+          {% if post.excerpt %}<p class="pub-card__desc">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 {% endif %}
-
-
-

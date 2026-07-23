@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
+site_theme               : "instrument" # Currently available options are "default", "air", "instrument"
 title                    : "Iman Sharifi"
 title_separator          : "-"
 name                     : &name "Iman Sharifi"
@@ -35,7 +35,7 @@ author:
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=-ycaNLMAAAAJ&hl"
+  googlescholar    : "https://scholar.google.com/citations?user=-ycaNLMAAAAJ&hl=en"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0000-1769-5337"
@@ -48,7 +48,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "https://github.com/iman-sharifi-ghb"
+  github           : "iman-sharifi-ghb"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -61,9 +61,9 @@ author:
   goodreads        : # Username
   google_plus      : # Username
   keybase          : # Username
-  instagram        : "https://www.instagram.com/iman_sharifi_official/" # Username
+  instagram        : "iman_sharifi_official" # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/iman-sharifi-98210184/"
+  linkedin         : "iman-sharifi-98210184"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -84,9 +84,11 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
+  preprints:
+    title: 'Preprints'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
@@ -140,8 +142,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "myprofile.png"  # Social media default site image
+og_description           : "Academic portfolio of Iman Sharifi — Ph.D. Candidate at George Washington University and Visiting Researcher at Stanford, working on multi-agent reinforcement learning, neuro-symbolic AI, and large language models for safe autonomous systems."  # Social media default site image description
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

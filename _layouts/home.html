@@ -1,0 +1,154 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div class="home">
+
+  <!-- ============================ HERO ============================ -->
+  <header class="home-hero">
+    <svg class="home-hero__bg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <pattern id="home-grat" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path d="M60 0 H0 V60" class="grid-line" fill="none"></path>
+        </pattern>
+      </defs>
+      <rect width="1200" height="620" fill="url(#home-grat)" opacity="0.5"></rect>
+    </svg>
+
+    <div class="home-wrap home-hero__grid">
+      <div class="home-hero__copy">
+        {% if page.hero_eyebrow %}<p class="home-eyebrow">{{ page.hero_eyebrow }}</p>{% endif %}
+        <h1 class="home-hero__title">{{ site.author.name | default: site.title }}</h1>
+        {% if page.hero_tagline %}<p class="home-lead">{{ page.hero_tagline | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+
+        {% if page.affiliations %}
+        <ul class="home-affil">
+          {% for a in page.affiliations %}
+            <li><span class="dot"></span>{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <div class="home-cta">
+          <a class="ibtn ibtn--primary" href="{{ base_path }}/files/CV.pdf"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i> Curriculum Vitae</a>
+          {% assign home_email = page.contact_email | default: site.author.email %}
+          {% if home_email %}<a class="ibtn" href="mailto:{{ home_email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a>{% endif %}
+          {% if site.author.googlescholar %}<a class="ibtn" href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar" aria-hidden="true"></i> Scholar</a>{% endif %}
+          {% if site.author.github %}<a class="ibtn" href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a>{% endif %}
+          {% if site.author.linkedin %}<a class="ibtn" href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>{% endif %}
+        </div>
+      </div>
+
+      <div class="home-hero__portrait">
+        <div class="home-portrait">
+          <img class="home-portrait__img" src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================= TELEMETRY ========================= -->
+  <div class="home-telemetry">
+    <div class="home-wrap home-telemetry__inner">
+      {% assign home_location = page.display_location | default: site.author.location %}
+      {% if home_location %}<span><span class="k">Location</span><span class="v">{{ home_location }}</span></span>{% endif %}
+      {% if page.focus %}<span><span class="k">Focus</span><span class="v">{{ page.focus }}</span></span>{% endif %}
+      {% if page.status %}<span><span class="k">Status</span><span class="live">&#9679; {{ page.status }}</span></span>{% endif %}
+    </div>
+  </div>
+
+  <!-- =========================== ABOUT =========================== -->
+  {% assign body = content | strip %}
+  {% if body != "" %}
+  <section class="home-section">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>About</h2><span class="home-label">Profile</span></div>
+      <div class="home-about">{{ content }}</div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ==================== SELECTED PUBLICATIONS ==================== -->
+  {% assign selected = site.publications | where: "selected", true | sort: "date" | reverse %}
+  {% if selected.size == 0 %}
+    {% assign selected = site.publications | sort: "date" | reverse %}
+  {% endif %}
+  <section class="home-section home-section--tint">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>Selected Publications</h2><a class="home-label" href="{{ base_path }}/publications/">Full list &rarr;</a></div>
+      <div class="home-pubs">
+        {% for pub in selected limit: 6 %}
+          {% if pub.paperurl %}{% assign plink = pub.paperurl %}{% else %}{% assign plink = pub.url | prepend: base_path %}{% endif %}
+          <article class="home-pub">
+            <div class="home-venue">{{ pub.venue_short | default: pub.venue }}<span class="yr">{{ pub.date | date: "%Y" }}</span></div>
+            <div>
+              <a class="home-pub__title" href="{{ plink }}">{{ pub.title }}</a>
+              <div class="home-pub__meta">{{ pub.venue }}</div>
+            </div>
+            {% if pub.paperurl %}<a class="home-pub__link" href="{{ pub.paperurl }}">Paper &rarr;</a>{% else %}<a class="home-pub__link" href="{{ pub.url | prepend: base_path }}">Details &rarr;</a>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ NEWS ============================ -->
+  {% if page.news %}
+  <section class="home-section">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>News</h2><span class="home-label">Recent activity</span></div>
+      <div class="home-timeline">
+        {% for item in page.news %}
+        <div class="home-news">
+          <div class="home-news__date">{{ item.date }}</div>
+          <div class="home-news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ====================== RESEARCH INTERESTS ==================== -->
+  {% if page.interests %}
+  <section class="home-section home-section--tint">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>Research Interests</h2><span class="home-label">Control &middot; Optimization &middot; Decision-making</span></div>
+      <ul class="home-interests">
+        {% for i in page.interests %}<li>{{ i }}</li>{% endfor %}
+      </ul>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ==================== AFFILIATIONS / SPONSORS ================= -->
+  {% if page.logos %}
+  <section class="home-section">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>Affiliations &amp; Sponsorship</h2></div>
+      <div class="home-logos">
+        {% for logo in page.logos %}
+        <a href="{{ logo.url }}" aria-label="{{ logo.name }}"><img src="{{ logo.img | prepend: '/images/' | prepend: base_path }}" alt="{{ logo.name }} logo" loading="lazy"></a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- =========================== CONTACT ========================== -->
+  <section class="home-section--tint">
+    <div class="home-wrap home-contact">
+      <h2>Let&rsquo;s collaborate</h2>
+      <p>{{ page.contact_text | default: "I'm always glad to discuss research in reinforcement learning, neuro-symbolic AI, and large language models. Feel free to reach out any time." }}</p>
+      <div class="home-cta">
+        {% assign contact_email = page.contact_email | default: site.author.email %}
+        {% if contact_email %}<a class="ibtn ibtn--primary" href="mailto:{{ contact_email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ contact_email }}</a>{% endif %}
+        {% if site.author.googlescholar %}<a class="ibtn" href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar" aria-hidden="true"></i> Google Scholar</a>{% endif %}
+        {% if site.author.orcid %}<a class="ibtn" href="{{ site.author.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i> ORCID</a>{% endif %}
+      </div>
+    </div>
+  </section>
+
+</div>

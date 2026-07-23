@@ -7,6 +7,38 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+<p class="pub-intro">
+  Courses I have supported as a teaching assistant, spanning graduate and undergraduate levels.
+</p>
+
+{% assign levels = "Graduate,Undergraduate" | split: "," %}
+{% for lvl in levels %}
+  {% assign courses = site.teaching | where: "level", lvl | sort: "date" | reverse %}
+  {% if courses.size > 0 %}
+    <section class="pub-group">
+      <div class="pub-group__head">
+        <h2>{{ lvl }} Courses</h2>
+        <span class="pub-group__count">{{ courses.size }}</span>
+      </div>
+      <div class="pub-list">
+        {% for course in courses %}
+          {% if course.level == "Undergraduate" %}{% assign rtag = "UG · TA" %}{% else %}{% assign rtag = "GRAD · TA" %}{% endif %}
+          <article class="pub-card">
+            <div class="pub-card__badge">
+              <span class="pub-card__venue">{{ rtag }}</span>
+              <span class="pub-card__year">{{ course.date | date: "%Y" }}</span>
+            </div>
+            <div class="pub-card__main">
+              <h3 class="pub-card__title"><a href="{{ course.url | prepend: base_path }}">{{ course.title }}</a></h3>
+              <div class="pub-card__venue-full">{{ course.venue }}{% if course.location %} &middot; {{ course.location }}{% endif %}</div>
+              {% if course.excerpt %}<p class="pub-card__desc">{{ course.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+              <div class="pub-card__actions">
+                <a class="pub-chip" href="{{ course.url | prepend: base_path }}"><i class="fas fa-fw fa-circle-info" aria-hidden="true"></i> Details</a>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
 {% endfor %}

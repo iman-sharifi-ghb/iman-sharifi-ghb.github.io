@@ -1,0 +1,32 @@
+---
+title: "Poster Presentation: Fine-Tuning Large Language Models for Cooperative Tactical Deconfliction of Small Unmanned Aerial Systems"
+collection: talks
+type: "Workshop Poster Presentation"
+permalink: /talks/2026-06-04-cvpr-poster
+venue: "Computer Vision and Pattern Recognition (CVPR) Conference"
+date: 2026-06-04
+location: "Denver, Colorado, USA"
+excerpt: "Fine-tuning large language models with supervised fine-tuning and GRPO for centralized conflict resolution and safe separation assurance in cooperative multi-agent drone operations."
+posterurl: "/files/CVPRWorkshop2026.pdf"
+---
+
+I presented a poster titled *"Fine-Tuning Large Language Models for Cooperative Tactical Deconfliction of Small Unmanned Aerial Systems"* at the **Computer Vision and Pattern Recognition (CVPR)** conference held in Denver, Colorado, USA, on **June 04, 2026**.  
+
+In this work, we investigate the use of Large Language Models (LLMs) for conflict resolution and safe separation assurance in multi-agent unmanned aerial systems. We evaluate the capabilities of pre-trained LLMs in this challenging safety-critical domain and demonstrate how Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) can significantly improve their performance.
+
+To the best of our knowledge, this work is among the first to explore the application of LLMs for centralized decision-making in cooperative multi-agent drone delivery and airspace deconfliction systems. As autonomous aerial mobility continues to evolve, we believe LLMs have the potential to become an important component of future intelligent traffic management frameworks.
+
+---
+
+### Poster (PDF)
+
+<a href="{{ '/files/CVPRWorkshop2026.pdf' | relative_url }}" class="btn btn--primary">
+	<i class="fas fa-fw fa-file-pdf icon-pad-right" aria-hidden="true"></i>
+	Download poster
+</a>
+
+<iframe
+	src="{{ '/files/CVPRWorkshop2026.pdf' | relative_url }}"
+	title="Poster PDF"
+	style="width: 100%; height: 900px; border: 0;"
+></iframe>

@@ -2,6 +2,8 @@
 title: "Advanced Applied Mathematics"
 collection: teaching
 type: "Graduate Course Teaching Assistant"
+level: "Graduate"
+excerpt: "Graduate course on analytical methods for engineering — partial differential equations, eigenvalue problems, and techniques used in control and dynamical systems."
 permalink: /teaching/2022-spring-advanced-math
 venue: "Sharif University of Technology, Department of Mechanical Engineering"
 date: 2022-03-01

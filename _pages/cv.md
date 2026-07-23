@@ -28,7 +28,7 @@ Experience
 ======
 * **Research Assistant**, Intelligent Autonomous Systems Lab (IASL), The George Washington University, Washington DC, USA *(Sep 2024 – Present)*  
   - Developed a decentralized-centralized training, decentralized execution **multi-agent reinforcement learning** framework using attention mechanisms for safe separation of heterogeneous sUAS fleets (NASA-funded project; under preparation for ITSC 2026).  
-  - Designed a novel **attention-based neuro-symbolic differentiable rule extractor (ANDRE)** capable of learning logical rules in continuous rule spaces via attention-based conjunction/disjunction operators and curriculum learning (under review at AAAI 2025).  
+  - Designed a novel **attention-based neuro-symbolic differentiable rule extractor (ANDRE)** capable of learning logical rules in continuous rule spaces via attention-based conjunction/disjunction operators (accepted at NeSy 2026).  
 
 * **Visiting Researcher**, Connected and Automated Vehicles Lab (CAV-Lab), University of Surrey, Guildford, UK *(Jan 2023 – Dec 2023)*  
   - Developed a **safe neuro-symbolic reinforcement learning** framework for autonomous driving systems, published in *Transportation Research Record (TRR)*.  
@@ -49,7 +49,7 @@ Publications
 {% endfor %}</ul>
 
 *(Selected Publications)*  
-1. I. Sharifi et al., “**ANDRE: An Attention-based Neurosymbolic Differentiable Rule Extractor**,” *Under review at AAAI 2025.*  
+1. I. Sharifi, P. Wei, and S. Fallah, “**ANDRE: An Attention-based Neuro-symbolic Differentiable Rule Extractor for Inductive Logic Programming**,” *International Conference on Neurosymbolic Learning and Reasoning (NeSy)*, 2026.  
 2. I. Sharifi et al., “**Towards Safe Autonomous Driving Policies using a Neuro-Symbolic Deep Reinforcement Learning Approach**,” *Transportation Research Record (TRR)*, 2025.  
 3. I. Sharifi et al., “**Integrating Neurosymbolic AI in Advanced Air Mobility: A Comprehensive Survey**,” *IJCAI 2025.*  
 4. I. Sharifi et al., “**Agricultural Spraying Drones: A Comprehensive Review**,” *Smart Agricultural Technology*, 2025.  

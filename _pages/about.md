@@ -1,119 +1,70 @@
 ---
+layout: home
 permalink: /
 title: "Iman Sharifi"
-author_profile: true
-redirect_from: 
+author_profile: false
+hero_eyebrow: "Ph.D. Candidate · Aerospace Autonomy & AI"
+hero_tagline: "I build **safe, interpretable, and verifiable AI** for autonomous flight — from multi-agent reinforcement learning to neuro-symbolic reasoning and large language models."
+focus: "Multi-Agent RL · Neuro-Symbolic AI · LLMs"
+status: "Seeking 2026–27 research internships"
+display_location: "Stanford, CA"
+contact_email: "imnshrf@stanford.edu"
+
+affiliations:
+  - name: "George Washington University"
+    url: "https://www.gwu.edu/"
+  - name: "Stanford SISL"
+    url: "https://sisl.stanford.edu/"
+  - name: "NASA ULI"
+    url: "https://www.nasa.gov/"
+
+interests:
+  - "Safe &amp; Interpretable Reinforcement Learning"
+  - "Neuro-Symbolic Reasoning &amp; Differentiable Logic"
+  - "Multi-Agent Systems &amp; Airspace Management"
+  - "Autonomous Vehicles &amp; Advanced Air Mobility"
+  - "Generative AI for Control &amp; Decision-Making"
+
+news:
+  - date: "2026 · 06"
+    text: "Our paper **ANDRE: An Attention-based Neuro-symbolic Differentiable Rule Extractor** was accepted at **NeSy 2026** (Int'l Conference on Neurosymbolic Learning and Reasoning)."
+  - date: "2026 · 06"
+    text: "Joined the **Stanford Intelligent Systems Laboratory (SISL)**, Dept. of Aeronautics &amp; Astronautics, as a visiting researcher."
+  - date: "2026 · 06"
+    text: "Presented our poster at **CVPR 2026** in Denver, Colorado."
+  - date: "2026 · 04"
+    text: "Paper accepted at **IEEE ITSC 2026**, Naples — *Separation Assurance between Heterogeneous Fleets of sUAS via Multi-Agent Reinforcement Learning*."
+  - date: "2026 · 04"
+    text: "Defended my Doctoral Qualifying Exam (DQE) — now a **Ph.D. Candidate** at George Washington University."
+  - date: "2026 · 03"
+    text: "Paper accepted at **CVPR Workshops 2026** — *Fine-Tuning Large Language Models for Cooperative Tactical Deconfliction of sUAS*."
+  - date: "2025 · 10"
+    text: "Published **Agricultural Spraying Drones: A Comprehensive Review** in *Smart Agricultural Technology*."
+  - date: "2025 · 09"
+    text: "Two papers accepted at **AIAA SciTech Forum 2026** on UTM and AAM cybersecurity."
+  - date: "2025 · 08"
+    text: "Published **Integrating Neurosymbolic AI in Advanced Air Mobility: A Comprehensive Survey** at **IJCAI 2025**."
+
+logos:
+  - name: "George Washington University"
+    url: "https://www.gwu.edu/"
+    img: "gwu-logo.png"
+  - name: "Stanford University"
+    url: "https://www.stanford.edu/"
+    img: "Stanford-University-Logo.jpg"
+  - name: "NASA"
+    url: "https://www.nasa.gov/"
+    img: "NASA-Logo-Large.jpg"
+
+contact_text: "I'm always glad to discuss research in reinforcement learning, neuro-symbolic AI, and large language models — and I'm actively seeking 2026–2027 research internships in academia, research labs, or industry."
+
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<div class="about-justify" markdown="1">
+I am a Ph.D. Candidate in Mechanical and Aerospace Engineering at [George Washington University](https://www.gwu.edu/), Washington DC, USA, where my research lies at the intersection of control, optimization, and decision-making. In particular, I work on **multi-agent reinforcement learning**, **neuro-symbolic artificial intelligence**, and **large language models (LLMs)**. I am broadly interested in developing interpretable and verifiable AI systems for safety-critical applications such as unmanned aerial systems (UAS) traffic management (UTM), advanced air mobility (AAM), and autonomous driving. My current Ph.D. program is funded by the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) University Leadership Initiative (ULI).
 
-I am a Ph.D. Candidate in Mechanical and Aerospace Engineering at [George Washington University](https://www.gwu.edu/), Washington DC, USA, where my research lies at the intersection of control, optimization, and decision-making. In particular, I work on **multi-agent reinforcement learning**, **neuro-symbolic artificial intelligence**, and **large language models (LLMs)**. I am broadly interested in developing interpretable and verifiable AI systems for safety-critical applications such as unmanned aerial systems (UAS) traffic management (UTM), advanced air mobility (AAM), and autonomous driving. My current Ph.D. program is funded by [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) university leadership initiative (ULI).
+Currently, I am a visiting student researcher in the [Stanford Intelligent Systems Laboratory (SISL)](https://sisl.stanford.edu/) at **Stanford University**, Department of Aeronautics and Astronautics, where I conduct research on safeguarding LLMs/VLMs using retrieval-augmented generation (RAG) in aviation applications. I have also conducted research as a visiting student researcher at the [Connected and Automated Vehicles Lab (CAV-Lab)](https://www.cav-lab.io/), University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using neuro-symbolic reinforcement learning in 2023.
 
-Currently, I am a visiting student researcher in [Stanford Intelligent System Laboratory (SISL)](https://sisl.stanford.edu/) at **Stanford University**, Department of Aeronautics and Astronautics, where I conduct research on safeguarding LLMs/VLMs using retrieval-augmented generations (RAGs) in aviation applications. I have also conducted research as a visiting student researcher at the [Connected and Automated Vehicles Lab (CAV-Lab)](https://www.cav-lab.io/), University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using neuro-symbolic reinforcement learning in 2023. 
-
-To date, my works have been published in venues such as *IEEE International Conference on Intelligent Transportation Systems (ITSC)*, *Computer Vision and Pattern Recognition (CVPR) Workshops*, *International Joint Conference on Artificial Intelligence (IJCAI)*, *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *Applied Sciences*, and *AIAA Scitech Forum*.
-
-I would love to collaborate on new projects related to my field of research: reinforcement learning, neuro-symbolic AI, and large language models (LLMs). Please feel free to send me an email via [i.sharifi@gwu.edu](mailto:i.sharifi@gwu.edu) if you are interested in such scientific collaborations.
-
----
-
-### Research Interests
-- Safe and Interpretable Reinforcement Learning  
-- Neuro-Symbolic Reasoning and Differentiable Logic  
-- Multi-Agent Systems and Airspace Management  
-- Autonomous Vehicles and Advanced Air Mobility  
-- Generative AI for Control and Decision-Making  
-
----
-
-### News
-- **[2026/06]** Officially joined the Stanford Intelligent Systems Laboratory (SISL) at the Department of Aeronautics & Astronautics in Stanford University.
-- **[2026/06]** Attended CVPR 2026 conference in Denver, Colorado, and presented our poster (see the talks tab for more details).
-- **[2026/04]** One paper has been accepted at 2026 IEEE 29th International Conference on Intelligent Transportation Systems (ITSC), Naples, Italy: "*Separation Assurance between Heterogeneous Fleets of Small Unmanned Aerial Systems via Multi-Agent Reinforcement Learning*".
-- **[2026/04]** Defended my Doctoral Qualifying Exam (DQE) and became a Ph.D. Candidate at George Washington University.
-- **[2026/03]** One paper has been accepted at the Proceedings of Computer Vision and Pattern Recognition (CVPR) Workshops 2026, Denver, Colorado, USA: "*Fine-Tuning Large Language Models for Cooperative Tactical Deconfliction of Small Unmanned Aerial Systems*".
-- **[2026/03]** Got admitted as a visiting student researcher to join SISL lab at Stanford University during Summer 2026.
-- **[2025/10]** Published *Agricultural Spraying Drones: A Comprehensive Review* at *Smart Agricultural Technology*.
-- **[2025/09]** Two papers accepted at *AIAA SciTech Forum 2026* on UTM and AAM cybersecurity. 
-- **[2025/09]** Published *Towards Safe Autonomous Driving Policies using a Neuro-Symbolic Deep Reinforcement Learning Approach* in *Transportation Research Record (TRR)*. 
-- **[2025/08]** Submitted *ANDRE: An Attention-Based Neurosymbolic Differentiable Rule Extractor* to AAAI 2025. 
-- **[2025/08]** Published *Integrating Neurosymbolic AI in Advanced Air Mobility: A Comprehensive Survey* at *Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence (IJCAI)*.
-- **[2024/09]** Officially Joined the Intelligent Autonomous Systems Lab (IASL) at The George Washington University as a Ph.D. student.  
-
----
-
-### Opportunities
-I am actively seeking research internship opportunities in 2026–2027 related to AI, autonomous systems, or reinforcement learning in academia, research labs, or industry. If you are interested in collaboration or have potential internship opportunities, feel free to reach out via [i.sharifi@gwu.edu](mailto:i.sharifi@gwu.edu).
-
----
-
-### Affiliation and Sponsorship
-
-<div style="display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 1.5rem;">
-  <a href="https://www.gwu.edu/" aria-label="George Washington University">
-    <img
-      src="{{ '/images/gwu-logo.png' | relative_url }}"
-      alt="George Washington University logo"
-      loading="lazy"
-      style="height: 72px; display: block;"
-    />
-  </a>
-
-  <a href="https://www.stanford.edu/" aria-label="Stanford University">
-    <img
-      src="{{ '/images/Stanford-University-Logo.jpg' | relative_url }}"
-      alt="Stanford University logo"
-      loading="lazy"
-      style="height: 72px; display: block;"
-    />
-  </a>
-
-  <a href="https://www.nasa.gov/" aria-label="NASA">
-    <img
-      src="{{ '/images/NASA-Logo-Large.jpg' | relative_url }}"
-      alt="NASA logo"
-      loading="lazy"
-      style="height: 72px; display: block;"
-    />
-  </a>
-</div>
-
----
-
-### Explore More
-- <i class="fas fa-fw fa-file-lines icon-pad-right" aria-hidden="true"></i> [**Curriculum Vitae**](/cv/)  
-<!-- - 🔬 [**Research Projects**](/portfolio/)   -->
-- <i class="fas fa-fw fa-book-open icon-pad-right" aria-hidden="true"></i> [**Publications**](/publications/) 
-- <i class="fas fa-fw fa-microphone icon-pad-right" aria-hidden="true"></i> [**Talks**](/talks/)  
-- <i class="fas fa-fw fa-chalkboard-user icon-pad-right" aria-hidden="true"></i> [**Teaching**](/teaching/) 
-
----
-
-### Contact
-<ul class="social-icons">
-  <li>
-    <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>
-    <a href="mailto:i.sharifi@gwu.edu">i.sharifi@gwu.edu</a>
-  </li>
-  <li>
-    <i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>
-    <a href="https://iman-sharifi-ghb.github.io/">iman-sharifi-ghb.github.io</a>
-  </li>
-  <li>
-    <i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>
-    <a href="https://www.linkedin.com/in/iman-sharifi-98210184/">linkedin.com/in/iman-sharifi-98210184</a>
-  </li>
-  <li>
-    <i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>
-    <a href="https://github.com/iman-sharifi-ghb">github.com/iman-sharifi-ghb</a>
-  </li>
-  <li>
-    <i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>
-    The George Washington University, Washington, DC, USA
-  </li>
-</ul>
-
----
-</div>
+To date, my work has been published in venues such as *IEEE ITSC*, *CVPR Workshops*, *IJCAI*, *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *Applied Sciences*, and the *AIAA SciTech Forum*.

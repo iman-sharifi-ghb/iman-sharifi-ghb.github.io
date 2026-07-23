@@ -1,0 +1,69 @@
+/* ==========================================================================
+   INSTRUMENT THEME - DARK ("Flight Deck / Night VFR")
+   Applied when the theme toggle sets html[data-theme="dark"].
+   ========================================================================== */
+
+/* Palette - dark */
+$ink            : #e7ecf3;   // primary text (cool white)
+$ink-soft       : #9dacc0;   // secondary text
+$ink-faint      : #6c7c90;   // captions / meta
+$ground         : #0b131f;   // page background (night airspace)
+$ground-2       : #0e1826;   // strips, footer
+$surface        : #121d2c;   // cards
+$line           : #22303f;   // hairlines
+$line-strong    : #31445a;   // stronger borders
+$accent         : #ff6a3d;   // beacon orange (brighter to hold on dark)
+$accent-deep    : #ff875f;   // hover
+
+/* Semantic colors (kept from base template) */
+$danger-color               : #ee5f5b;
+$info-color                 : #2f7f93;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Structural settings */
+$border-radius              : 8px;
+$box-shadow                 : 0 1px 2px rgba(0, 0, 0, 0.4), 0 14px 40px rgba(0, 0, 0, 0.45);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+html[data-theme="dark"] {
+    --global-base-color                 : #{$ink-soft};
+    --global-bg-color                   : #{$ground};
+    --global-footer-bg-color            : #{$ground-2};
+    --global-border-color               : #{$line};
+    --global-dark-border-color          : #{$line-strong};
+    --global-code-background-color      : #{$ground-2};
+    --global-code-text-color            : #{$ink};
+    --global-fig-caption-color          : #{$ink-faint};
+    --global-link-color                 : #{$accent};
+    --global-link-color-hover           : #{$accent-deep};
+    --global-link-color-visited         : #{$accent-deep};
+    --global-masthead-link-color        : #{$ink};
+    --global-masthead-link-color-hover  : #{$accent};
+    --global-text-color                 : #{$ink};
+    --global-text-color-light           : #{$ink-soft};
+    --global-thead-color                : #{$ground-2};
+
+    /* Extra tokens consumed by the custom homepage + refreshed components */
+    --ink                               : #{$ink};
+    --ink-soft                          : #{$ink-soft};
+    --ink-faint                         : #{$ink-faint};
+    --ground                            : #{$ground};
+    --ground-2                          : #{$ground-2};
+    --surface                           : #{$surface};
+    --line                              : #{$line};
+    --line-strong                       : #{$line-strong};
+    --accent                            : #{$accent};
+    --accent-deep                       : #{$accent-deep};
+    --accent-contrast                   : #0b131f;
+    --accent-wash                       : rgba(255, 106, 61, 0.13);
+    --accent-border                     : rgba(255, 106, 61, 0.32);
+    --card-shadow                       : #{$box-shadow};
+    --font-mono                         : #{$monospace};
+}

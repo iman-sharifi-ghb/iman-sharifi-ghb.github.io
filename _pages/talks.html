@@ -1,16 +1,36 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Talks & Presentations"
 permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+{% include base_path %}
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
+<p class="pub-intro">
+  Selected talks and poster presentations at conferences and research workshops.{% if site.talkmap_link == true %} <a href="{{ base_path }}/talkmap.html">See a map of where I&rsquo;ve presented</a>.{% endif %}
+</p>
 
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+<div class="pub-list">
+  {% assign talks = site.talks | sort: "date" | reverse %}
+  {% for talk in talks %}
+    {% assign ttag = "TALK" %}
+    {% if talk.type contains "Poster" %}{% assign ttag = "POSTER" %}{% elsif talk.type contains "Tutorial" %}{% assign ttag = "TUTORIAL" %}{% endif %}
+    {% assign disp_title = talk.title | remove_first: "Poster Presentation: " %}
+    <article class="pub-card">
+      <div class="pub-card__badge">
+        <span class="pub-card__venue">{{ ttag }}</span>
+        <span class="pub-card__year">{{ talk.date | date: "%Y" }}</span>
+      </div>
+      <div class="pub-card__main">
+        <h3 class="pub-card__title"><a href="{{ talk.url | prepend: base_path }}">{{ disp_title }}</a></h3>
+        <div class="pub-card__venue-full">{{ talk.venue }}{% if talk.location %} &middot; {{ talk.location }}{% endif %}</div>
+        {% if talk.excerpt %}<p class="pub-card__desc">{{ talk.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+        <div class="pub-card__actions">
+          {% if talk.posterurl %}<a class="pub-chip pub-chip--primary" href="{{ talk.posterurl | prepend: base_path }}"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> Poster</a>{% endif %}
+          <a class="pub-chip" href="{{ talk.url | prepend: base_path }}"><i class="fas fa-fw fa-circle-info" aria-hidden="true"></i> Details</a>
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   INSTRUMENT THEME - LIGHT ("Daylight VFR / Chart Paper")
+   Cool navy ink + signal-orange accent, biased-cool neutrals.
+   ========================================================================== */
+
+/* Palette - light */
+$ink            : #0f1b2d;   // primary text (deep airspace navy)
+$ink-soft       : #46566b;   // secondary text (slate)
+$ink-faint      : #7f8ea0;   // captions / meta
+$ground         : #eff3f7;   // page background (cool chart paper)
+$ground-2       : #e4eaf0;   // strips, footer, code bg
+$surface        : #ffffff;   // cards
+$line           : #d2dae3;   // hairlines
+$line-strong    : #bac6d2;   // stronger borders
+$accent         : #e4572e;   // signal orange
+$accent-deep    : #be3f1d;   // hover / pressed
+
+/* Semantic colors used by notices / alerts (kept from base template) */
+$danger-color               : #ee5f5b;
+$info-color                 : #2f7f93;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Structural settings */
+$border-radius              : 8px;
+$box-shadow                 : 0 1px 2px rgba(15, 27, 45, 0.06), 0 10px 30px rgba(15, 27, 45, 0.06);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+    --global-base-color                 : #{$ink-soft};
+    --global-bg-color                   : #{$ground};
+    --global-footer-bg-color            : #{$ground-2};
+    --global-border-color               : #{$line};
+    --global-dark-border-color          : #{$line-strong};
+    --global-code-background-color      : #{$ground-2};
+    --global-code-text-color            : #{$ink};
+    --global-fig-caption-color          : #{$ink-faint};
+    --global-link-color                 : #{$accent};
+    --global-link-color-hover           : #{$accent-deep};
+    --global-link-color-visited         : #{$accent-deep};
+    --global-masthead-link-color        : #{$ink};
+    --global-masthead-link-color-hover  : #{$accent};
+    --global-text-color                 : #{$ink};
+    --global-text-color-light           : #{$ink-soft};
+    --global-thead-color                : #{$ground-2};
+
+    /* Extra tokens consumed by the custom homepage + refreshed components */
+    --ink                               : #{$ink};
+    --ink-soft                          : #{$ink-soft};
+    --ink-faint                         : #{$ink-faint};
+    --ground                            : #{$ground};
+    --ground-2                          : #{$ground-2};
+    --surface                           : #{$surface};
+    --line                              : #{$line};
+    --line-strong                       : #{$line-strong};
+    --accent                            : #{$accent};
+    --accent-deep                       : #{$accent-deep};
+    --accent-contrast                   : #ffffff;
+    --accent-wash                       : rgba(228, 87, 46, 0.10);
+    --accent-border                     : rgba(228, 87, 46, 0.30);
+    --card-shadow                       : #{$box-shadow};
+    --font-mono                         : #{$monospace};
+}

@@ -2,6 +2,8 @@
 title: "Fuzzy Systems & Control"
 collection: teaching
 type: "Graduate Course Teaching Assistant"
+level: "Graduate"
+excerpt: "Graduate course on fuzzy logic and its applications in control engineering — rule-based reasoning and fuzzy inference systems. Led problem sessions and designed and graded assignments."
 permalink: /teaching/2022-spring-fuzzy-systems
 venue: "Sharif University of Technology, Department of Mechanical Engineering"
 date: 2022-03-01
