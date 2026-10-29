@@ -13,6 +13,8 @@ authors: "Iman Sharifi, Mahyar Ghazanfari, Abenezer Taye, Peng Wei, Maheed Ahmed
 arxiv: "https://arxiv.org/abs/2601.08229"
 doi: "10.2514/6.2026-2892"
 topics: ["Drones & Air Mobility", "Surveys"]
+teaser: "teasers/2026-utm-security-survey.webp"
+teaser_alt: "Taxonomy of sUAS security vulnerabilities across communication, navigation, perception, and system and software, with example attacks in each category."
 abstract: >-
   The rapid growth of small Unmanned Aerial Systems (sUAS) for civil and commercial missions has
   intensified concerns about their resilience to cyber-security threats. Operating within the emerging

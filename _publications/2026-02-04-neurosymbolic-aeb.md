@@ -12,6 +12,8 @@ citation: "V. Asodia, I. Sharifi, and S. Fallah. (2026). \"Reinforcement Learnin
 authors: "Vinal Asodia, Iman Sharifi, Saber Fallah"
 arxiv: "https://arxiv.org/abs/2602.05079"
 topics: ["Neuro-Symbolic AI", "Reinforcement Learning", "Autonomous Driving"]
+teaser: "teasers/2026-neurosymbolic-aeb.webp"
+teaser_alt: "Top-down view of a CARLA urban driving scenario used to evaluate autonomous emergency braking."
 abstract: >-
   The problem with existing camera-based Deep Reinforcement Learning approaches is twofold: they
   rarely integrate high-level scene context into the feature representation, and they rely on rigid,

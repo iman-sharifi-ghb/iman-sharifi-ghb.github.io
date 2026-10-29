@@ -2,6 +2,7 @@
 layout: home
 permalink: /
 title: "Iman Sharifi"
+description: "Iman Sharifi is a Ph.D. candidate at George Washington University and visiting researcher at Stanford SISL, building safe and interpretable AI for autonomous flight with multi-agent reinforcement learning, neuro-symbolic AI, and large language models."
 author_profile: false
 hero_eyebrow: "Ph.D. Candidate · Aerospace Autonomy & AI"
 hero_tagline: "I build **safe, interpretable, and verifiable AI** for autonomous flight — from multi-agent reinforcement learning to neuro-symbolic reasoning and large language models."
@@ -146,4 +147,4 @@ I am a Ph.D. Candidate in Mechanical and Aerospace Engineering at [George Washin
 
 Currently, I am a visiting student researcher in the [Stanford Intelligent Systems Laboratory (SISL)](https://sisl.stanford.edu/) at **Stanford University**, Department of Aeronautics and Astronautics, where I conduct research on safeguarding LLMs/VLMs using retrieval-augmented generation (RAG) in aviation applications. I have also conducted research as a visiting student researcher at the [Connected and Automated Vehicles Lab (CAV-Lab)](https://www.cav-lab.io/), University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using neuro-symbolic reinforcement learning in 2023.
 
-To date, my work has been published in venues such as *IEEE ITSC*, *CVPR Workshops*, *IJCAI*, *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *Applied Sciences*, and the *AIAA SciTech Forum*.
+To date, my work has been published in venues such as *IEEE ITSC*, *CVPR Workshops*, *IJCAI*, *NeSy*, *Smart Agricultural Technology*, *Transportation Research Record (TRR)*, *Applied Sciences*, and the *AIAA SciTech Forum*.

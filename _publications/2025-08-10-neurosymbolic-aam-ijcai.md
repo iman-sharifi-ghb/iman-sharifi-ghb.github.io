@@ -14,6 +14,8 @@ authors: "Kamal Acharya, Iman Sharifi, Mehul Lad, Liang Sun, Houbing Song"
 arxiv: "https://arxiv.org/abs/2508.07163"
 doi: "10.24963/ijcai.2025/1151"
 topics: ["Neuro-Symbolic AI", "Drones & Air Mobility", "Surveys"]
+teaser: "teasers/2025-neurosymbolic-aam-ijcai.webp"
+teaser_alt: "Application areas of neurosymbolic AI in advanced air mobility covered by the survey: demand modeling, electrification, training and simulation, autonomy, aircraft design, safety, predictive maintenance, and cybersecurity."
 abstract: >-
   Neurosymbolic AI combines neural network adaptability with symbolic reasoning, promising an approach
   to address the complex regulatory, operational, and safety challenges in Advanced Air Mobility

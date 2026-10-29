@@ -13,6 +13,8 @@ authors: "Mahyar Ghazanfari, Iman Sharifi, Peng Wei, Abenezer Taye, Bryan Ward, 
 arxiv: "https://arxiv.org/abs/2601.14415"
 doi: "10.2514/6.2026-2891"
 topics: ["Drones & Air Mobility", "Surveys"]
+teaser: "teasers/2026-aam-security-survey.webp"
+teaser_alt: "Physical and environmental threats to an eVTOL aircraft perception system: rain, fog, and illumination anomalies, camera feed spoofing, adversarial patches, and infrared or laser attacks."
 abstract: >-
   This survey reviews the existing and envisioned security vulnerabilities and defense mechanisms
   relevant to Advanced Air Mobility (AAM) systems, with a focus on electric vertical takeoff and

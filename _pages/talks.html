@@ -24,7 +24,7 @@ author_profile: true
         <span class="pub-card__year">{{ talk.date | date: "%Y" }}</span>
       </div>
       <div class="pub-card__main">
-        <h3 class="pub-card__title"><a href="{{ talk.url | prepend: base_path }}">{{ disp_title }}</a></h3>
+        <h2 class="pub-card__title"><a href="{{ talk.url | prepend: base_path }}">{{ disp_title }}</a></h2>
         <div class="pub-card__venue-full">{{ talk.venue }}{% if talk.location %} &middot; {{ talk.location }}{% endif %}</div>
         {% if talk.excerpt %}<p class="pub-card__desc">{{ talk.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
         <div class="pub-card__actions">

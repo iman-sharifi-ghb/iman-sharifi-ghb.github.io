@@ -13,6 +13,8 @@ authors: "Iman Sharifi, Aria Alasty"
 arxiv: "https://arxiv.org/abs/2307.01312"
 codeurl: "https://github.com/iman-sharifi-ghb/Self-Tuning-PID-Control-using-Reinforcement-Learning-Based-Neural-Network"
 topics: ["Reinforcement Learning", "Drones & Air Mobility"]
+teaser: "teasers/2022-hybrid-pid-isme.webp"
+teaser_alt: "Framework: an actor-critic neural network tunes the PID gains (Kp, Ki, Kd) online, alongside a second network that identifies the quadcopter dynamics."
 abstract: >-
   Proportional-Integrator-Derivative (PID) controller is used in a wide range of industrial and
   experimental processes. There are a couple of offline methods for tuning PID gains. However, due to

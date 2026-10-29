@@ -105,7 +105,7 @@ layout: default
                   <source src="{{ r.video | prepend: '/images/' | prepend: base_path }}">
                 </video>
               {% else %}
-                <img src="{{ r.image | prepend: '/images/' | prepend: base_path }}" alt="{{ r.image_alt }}" loading="lazy">
+                {% if r.anim %}<noscript>{% endif %}<img src="{{ r.image | prepend: '/images/' | prepend: base_path }}" alt="{{ r.image_alt }}" loading="lazy">{% if r.anim %}</noscript>{% endif %}
                 {% if r.anim %}<canvas class="home-rcard__canvas" data-anim="{{ r.anim }}" role="img" aria-label="{{ r.anim_alt | default: r.image_alt }}" hidden></canvas>{% endif %}
               {% endif %}
             </div>

@@ -1,0 +1,9 @@
+{% comment %}
+  GoatCounter: privacy-friendly, cookie-free page counts (no consent banner needed).
+  Set analytics.goatcounter.code in _config.yml to your GoatCounter site code.
+  count.js ignores localhost, so local previews are not counted.
+{% endcomment %}
+{% assign gc_code = site.analytics.goatcounter.code | strip %}
+{% if gc_code != "" and gc_code != nil %}
+<script data-goatcounter="https://{{ gc_code }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{% endif %}
