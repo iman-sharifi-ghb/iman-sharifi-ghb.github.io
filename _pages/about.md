@@ -85,9 +85,9 @@ news:
 # Photo strip on the home page. Each "img" has a full-size .webp and a -thumb.webp in /images/.
 # Copies in images/gallery are resized and stripped of location metadata; originals stay in images/personal (not published).
 gallery:
-  - img: "gallery/cvpr-2026-poster"
-    caption: "Presenting our poster at CVPR 2026, Denver"
-    alt: "Iman standing next to his research poster at CVPR 2026"
+  - img: "gallery/stanford-oval"
+    caption: "Stanford Oval and Hoover Tower"
+    alt: "Iman on a Stanford walkway with Hoover Tower in the background"
   - img: "gallery/sisl-kochenderfer"
     caption: "With Prof. Mykel Kochenderfer, Stanford SISL"
     alt: "Iman with Prof. Mykel Kochenderfer outside a Stanford building"
@@ -109,9 +109,9 @@ gallery:
   - img: "gallery/golden-gate"
     caption: "Golden Gate Bridge, San Francisco"
     alt: "Iman by the bay with the Golden Gate Bridge behind him"
-  - img: "gallery/stanford-oval"
-    caption: "Stanford Oval and Hoover Tower"
-    alt: "Iman on a Stanford walkway with Hoover Tower in the background"
+  - img: "gallery/cvpr-2026-poster"
+    caption: "Presenting our poster at CVPR 2026, Denver"
+    alt: "Iman standing next to his research poster at CVPR 2026"
 
 logos:
   - name: "George Washington University"
