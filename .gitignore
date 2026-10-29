@@ -21,3 +21,6 @@ package-lock.json
 
 # Ignore folders related to IDEs
 .vscode/
+
+# Original personal photos (contain GPS metadata); publish cleaned copies from images/gallery instead
+images/personal/

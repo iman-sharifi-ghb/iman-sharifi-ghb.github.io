@@ -23,14 +23,14 @@ repository               : "iman-sharifi-ghb/iman-sharifi-ghb.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "myprofile.png"
+  avatar           : "profile-stanford-square.webp"
   name             : "Iman Sharifi"
   pronouns         : #"he/him"
   bio              : "Visiting Researcher at Stanford University | Ph.D. Candidate at George Washington University"
-  location         : "Washington, DC"
+  location         : "Stanford, CA"
   employer         : "George Washington University"
   uri              : # URL
-  email            : "i.sharifi@gwu.edu" 
+  email            : "i.sharifi@gwu.edu"
 
   # Academic websites
   academia         : # URL
@@ -191,6 +191,21 @@ exclude:
   - README
   - tmp
   - vendor
+  # Repo tooling that should not be published
+  - README.md
+  - CONTRIBUTING.md
+  - docker-compose.yaml
+  - _config_docker.yml
+  - markdown_generator
+  - scripts
+  - talkmap
+  - talkmap.py
+  - "*.ipynb"
+  # Original personal photos (contain GPS metadata); cleaned copies live in images/gallery
+  - images/personal
+  # Superseded CVs (kept in the repo, not on the site)
+  - files/Archiv
+  - files/CV_old1.pdf
 keep_files:
   - .git
   - .svn

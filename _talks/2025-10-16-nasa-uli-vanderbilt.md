@@ -8,6 +8,11 @@ date: 2025-10-16
 location: "Nashville, Tennessee, USA"
 excerpt: "A multi-agent reinforcement learning framework for safe separation among heterogeneous small UAS fleets in shared airspace, presented at the NASA ULI program workshop."
 posterurl: "/files/nasa-uli-2025-poster.pdf"
+posterimg: "/images/posters/nasa-uli-2025.webp"
+posterimg_full: "/images/posters/nasa-uli-2025-full.webp"
+poster_thumb: "/images/posters/nasa-uli-2025-thumb.webp"
+poster_dims: [1600, 1067]
+paper: "/publication/2026-heterogeneous-deconfliction-itsc"
 ---
 
 I presented a poster titled *"sUAS Separation Assurance with Mixed Aircraft Equipage and Heterogeneous Tactical Deconfliction Policies"* at the **NASA University Leadership Initiative (ULI) Workshop** held at **Vanderbilt University**, Nashville, Tennessee, USA, on **October 16, 2025**.  
@@ -15,18 +20,3 @@ I presented a poster titled *"sUAS Separation Assurance with Mixed Aircraft Equi
 This workshop brought together multiple research teams and industrial partners collaborating under NASA's ULI program, including **The George Washington University**, **Vanderbilt University**, **Tennessee State University**, **The University of Texas at Austin**, **Purdue University**, **UC Irvine**, and **Collins Aerospace**.  
 
 The presented work focused on a **multi-agent reinforcement learning framework** for ensuring safe separation among heterogeneous small Unmanned Aerial Systems (sUAS) operating in shared airspace environments.
-
----
-
-### Poster (PDF)
-
-<a href="{{ '/files/nasa-uli-2025-poster.pdf' | relative_url }}" class="btn btn--primary">
-	<i class="fas fa-fw fa-file-pdf icon-pad-right" aria-hidden="true"></i>
-	Download poster
-</a>
-
-<iframe
-	src="{{ '/files/nasa-uli-2025-poster.pdf' | relative_url }}"
-	title="Poster PDF"
-	style="width: 100%; height: 900px; border: 0;"
-></iframe>

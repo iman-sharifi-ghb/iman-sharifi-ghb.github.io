@@ -42,6 +42,37 @@ layout: default
 
       <section class="page__content" itemprop="text">
         {{ content }}
+
+        {% if page.video %}
+        {% comment %}Click-to-play: nothing loads from YouTube until the visitor presses play (site-extras.js){% endcomment %}
+        <div class="video-embed">
+          <a class="video-embed__open" href="https://www.youtube.com/watch?v={{ page.video }}" data-youtube="{{ page.video }}" data-title="{{ page.title | escape }}">
+            {% if page.video_cover %}<img src="{{ page.video_cover | prepend: base_path }}" alt="" loading="lazy">{% endif %}
+            <span class="video-embed__play" aria-hidden="true"><i class="fas fa-play"></i></span>
+            <span class="video-embed__label">Watch the talk</span>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if page.paper or page.posterurl or page.slidesurl or page.video %}
+        <div class="pub-card__actions">
+          {% if page.paper %}<a class="pub-chip pub-chip--primary" href="{{ base_path }}{{ page.paper }}"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
+          {% if page.slidesurl %}<a class="pub-chip" href="{{ page.slidesurl | prepend: base_path }}"><i class="fas fa-fw fa-display" aria-hidden="true"></i> Slides (PDF)</a>{% endif %}
+          {% if page.video %}<a class="pub-chip" href="https://youtu.be/{{ page.video }}"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i> YouTube</a>{% endif %}
+          {% if page.posterurl %}<a class="pub-chip" href="{{ page.posterurl | prepend: base_path }}"><i class="fas fa-fw fa-file-pdf" aria-hidden="true"></i> Poster PDF</a>{% endif %}
+        </div>
+        {% endif %}
+
+        {% if page.photos %}{% include photo-grid.html photos=page.photos %}{% endif %}
+
+        {% if page.posterimg %}
+        <figure class="poster">
+          <a class="poster__open" href="{{ page.posterimg_full | default: page.posterimg | prepend: base_path }}" data-viewer data-viewer-title="{{ page.title | remove_first: 'Poster Presentation: ' | escape }}">
+            <img src="{{ page.posterimg | prepend: base_path }}"{% if page.poster_dims %} width="{{ page.poster_dims[0] }}" height="{{ page.poster_dims[1] }}"{% endif %} alt="Poster: {{ page.title | remove_first: 'Poster Presentation: ' | escape }}" loading="lazy">
+            <span class="poster__hint"><i class="fas fa-fw fa-magnifying-glass-plus" aria-hidden="true"></i> View full size</span>
+          </a>
+        </figure>
+        {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 

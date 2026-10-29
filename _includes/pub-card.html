@@ -1,0 +1,31 @@
+{% comment %}
+  Publication card for /publications/. Params: pub (the publication document)
+{% endcomment %}
+{% include base_path %}
+{% assign post = include.pub %}
+<article class="pub-card" data-topics="{{ post.topics | join: '|' }}">
+  <div class="pub-card__badge">
+    <span class="pub-card__venue">{{ post.venue_short | default: post.venue }}</span>
+    <span class="pub-card__year">{{ post.date | date: "%Y" }}</span>
+  </div>
+  <div class="pub-card__main">
+    <h3 class="pub-card__title"><a href="{{ post.url | prepend: base_path }}">{{ post.title }}</a></h3>
+    {% if post.authors %}<p class="pub-card__authors">{% include pub-authors.html authors=post.authors limit=6 %}</p>{% endif %}
+    {% if post.venue %}<div class="pub-card__venue-full">{{ post.venue }}</div>{% endif %}
+    {% if post.excerpt %}<p class="pub-card__desc">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
+    {% include pub-actions.html pub=post details=true %}
+    {% if post.abstract %}
+    <details class="pub-cite">
+      <summary>Abstract</summary>
+      <p class="pub-cite__text">{{ post.abstract }}</p>
+    </details>
+    {% endif %}
+    {% if post.citation or post.bibtex %}
+    <details class="pub-cite">
+      <summary>Cite</summary>
+      {% if post.citation %}<p class="pub-cite__text">{{ post.citation }}</p>{% endif %}
+      {% if post.bibtex %}{% include pub-bibtex.html pub=post %}{% endif %}
+    </details>
+    {% endif %}
+  </div>
+</article>

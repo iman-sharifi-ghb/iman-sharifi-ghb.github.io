@@ -101,6 +101,12 @@ $(document).ready(function () {
 
   // Enable the theme toggle
   $('#theme-toggle').on('click', toggleTheme);
+  $('#theme-toggle').on('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleTheme();
+    }
+  });
 
   // Enable the sticky footer
   var bumpIt = function () {

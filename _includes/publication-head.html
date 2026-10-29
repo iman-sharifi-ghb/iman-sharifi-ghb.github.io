@@ -1,0 +1,28 @@
+{% include base_path %}
+<div class="pubd">
+  <div class="pubd__meta">
+    <span class="pub-card__venue">{{ page.venue_short | default: page.venue }}</span>
+    <span class="pub-card__year">{{ page.date | date: "%Y" }}</span>
+    {% if page.category and site.publication_category[page.category] %}<span class="pubd__type">{{ site.publication_category[page.category].title }}</span>{% endif %}
+  </div>
+  {% if page.authors %}<p class="pubd__authors">{% include pub-authors.html authors=page.authors %}</p>{% endif %}
+  {% if page.venue %}<p class="pub-card__venue-full">{{ page.venue }}</p>{% endif %}
+
+  {% include pub-actions.html pub=page %}
+  {% if page.bibtex %}<a class="pubd__cite-link" href="#cite"><i class="fas fa-fw fa-quote-right" aria-hidden="true"></i> Cite this paper</a>{% endif %}
+
+  {% if page.teaser %}
+  <figure class="pubd__teaser">
+    <img src="{{ page.teaser | prepend: '/images/' | prepend: base_path }}" alt="{{ page.teaser_alt | default: page.title }}" loading="lazy">
+    {% if page.teaser_alt %}<figcaption>{{ page.teaser_alt }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
+  {% if page.abstract %}
+    <h2 class="pubd__h">Abstract</h2>
+    <p class="pubd__abstract">{{ page.abstract }}</p>
+  {% elsif page.excerpt %}
+    <h2 class="pubd__h">Summary</h2>
+    <p class="pubd__abstract">{{ page.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+  {% endif %}
+</div>

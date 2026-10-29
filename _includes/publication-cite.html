@@ -1,0 +1,7 @@
+{% if page.citation or page.bibtex %}
+<section class="pubd__cite" id="cite">
+  <h2 class="pubd__h">Cite</h2>
+  {% if page.citation %}<p class="pub-cite__text">{{ page.citation }}</p>{% endif %}
+  {% if page.bibtex %}{% include pub-bibtex.html pub=page %}{% endif %}
+</section>
+{% endif %}

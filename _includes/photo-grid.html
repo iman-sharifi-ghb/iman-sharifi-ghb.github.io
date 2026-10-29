@@ -1,0 +1,16 @@
+{% comment %}
+  Captioned photo grid; each photo opens in the full-screen viewer (site-extras.js).
+  Params: photos (list of {img, caption, alt}; img is a path under /images/ without
+          extension, with a matching -thumb.webp), feature (true to enlarge the first photo)
+{% endcomment %}
+{% include base_path %}
+<div class="photo-grid{% if include.feature %} photo-grid--feature{% endif %}" data-viewer-group>
+  {% for g in include.photos %}
+  <figure class="photo-grid__item reveal" style="--i: {{ forloop.index0 | at_most: 5 }}">
+    <a href="{{ g.img | append: '.webp' | prepend: '/images/' | prepend: base_path }}" data-viewer data-viewer-title="{{ g.caption | escape }}">
+      <img src="{{ g.img | append: '-thumb.webp' | prepend: '/images/' | prepend: base_path }}" alt="{{ g.alt | default: g.caption | escape }}" loading="lazy">
+    </a>
+    <figcaption>{{ g.caption }}</figcaption>
+  </figure>
+  {% endfor %}
+</div>

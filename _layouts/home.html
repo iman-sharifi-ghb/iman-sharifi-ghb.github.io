@@ -16,6 +16,9 @@ layout: default
       </defs>
       <rect width="1200" height="620" fill="url(#home-grat)" opacity="0.5"></rect>
     </svg>
+    {% comment %}Live airspace simulation drawn by hero-sim.js; purely decorative{% endcomment %}
+    <canvas class="home-hero__sim" aria-hidden="true"></canvas>
+    <p class="home-hero__hud" aria-hidden="true" hidden><span class="k">Sim</span> urban UTM &middot; <span data-hud="agents">0</span> sUAS &middot; <span data-hud="pads">0</span> vertiports &middot; <span data-hud="active">0</span> active &middot; <span data-hud="conflicts">0</span> conflicts resolved</p>
 
     <div class="home-wrap home-hero__grid">
       <div class="home-hero__copy">
@@ -43,7 +46,7 @@ layout: default
 
       <div class="home-hero__portrait">
         <div class="home-portrait">
-          <img class="home-portrait__img" src="{{ site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}" fetchpriority="high">
+          <img class="home-portrait__img" src="{{ page.hero_photo | default: site.author.avatar | prepend: '/images/' | prepend: base_path }}" alt="{{ site.author.name }}" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -55,7 +58,7 @@ layout: default
       {% assign home_location = page.display_location | default: site.author.location %}
       {% if home_location %}<span><span class="k">Location</span><span class="v">{{ home_location }}</span></span>{% endif %}
       {% if page.focus %}<span><span class="k">Focus</span><span class="v">{{ page.focus }}</span></span>{% endif %}
-      {% if page.status %}<span><span class="k">Status</span><span class="live">&#9679; {{ page.status }}</span></span>{% endif %}
+      {% if page.status %}<span><span class="k">Status</span><span class="live"><span class="pulse" aria-hidden="true"></span>{{ page.status }}</span></span>{% endif %}
     </div>
   </div>
 
@@ -65,7 +68,55 @@ layout: default
   <section class="home-section">
     <div class="home-wrap">
       <div class="home-section__head"><h2>About</h2><span class="home-label">Profile</span></div>
-      <div class="home-about">{{ content }}</div>
+      <div class="home-about-grid">
+        <div class="home-about reveal">{{ content }}</div>
+        {% if page.education %}
+        <aside class="home-edu reveal" style="--i: 1" aria-label="Education">
+          <p class="home-label">Education</p>
+          <ol class="home-edu__list">
+            {% for e in page.education %}
+            <li>
+              <span class="home-edu__years">{{ e.years }}</span>
+              <span class="home-edu__degree">{{ e.degree }}</span>
+              <span class="home-edu__school">{{ e.school }}</span>
+            </li>
+            {% endfor %}
+          </ol>
+          <a class="home-edu__cv" href="{{ base_path }}/files/CV.pdf">Full CV &rarr;</a>
+        </aside>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ======================== RESEARCH THEMES ===================== -->
+  {% if page.research %}
+  <section class="home-section home-section--tint">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>Research</h2><span class="home-label">Control &middot; Optimization &middot; Decision-making</span></div>
+      <div class="home-research">
+        {% for r in page.research %}
+          {% assign n = site.publications | where_exp: "p", "p.topics contains r.topic" | size %}
+          <article class="home-rcard reveal" style="--i: {{ forloop.index0 }}">
+            <div class="home-rcard__media{% if r.fit == 'cover' %} is-cover{% endif %}{% if r.anim and r.video == nil %} is-anim{% endif %}">
+              {% if r.video %}
+                <video autoplay muted loop playsinline preload="metadata" poster="{{ r.image | prepend: '/images/' | prepend: base_path }}" aria-label="{{ r.image_alt }}">
+                  <source src="{{ r.video | prepend: '/images/' | prepend: base_path }}">
+                </video>
+              {% else %}
+                <img src="{{ r.image | prepend: '/images/' | prepend: base_path }}" alt="{{ r.image_alt }}" loading="lazy">
+                {% if r.anim %}<canvas class="home-rcard__canvas" data-anim="{{ r.anim }}" role="img" aria-label="{{ r.anim_alt | default: r.image_alt }}" hidden></canvas>{% endif %}
+              {% endif %}
+            </div>
+            <div class="home-rcard__body">
+              <h3>{{ r.title }}</h3>
+              <p>{{ r.text }}</p>
+              {% if n > 0 %}<a class="home-rcard__link" href="{{ base_path }}/publications/?topic={{ r.topic | url_encode }}">{{ n }} paper{% if n > 1 %}s{% endif %} on {{ r.topic }} &rarr;</a>{% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </div>
   </section>
   {% endif %}
@@ -75,13 +126,13 @@ layout: default
   {% if selected.size == 0 %}
     {% assign selected = site.publications | sort: "date" | reverse %}
   {% endif %}
-  <section class="home-section home-section--tint">
+  <section class="home-section">
     <div class="home-wrap">
       <div class="home-section__head"><h2>Selected Publications</h2><a class="home-label" href="{{ base_path }}/publications/">Full list &rarr;</a></div>
       <div class="home-pubs">
         {% for pub in selected limit: 6 %}
-          {% if pub.paperurl %}{% assign plink = pub.paperurl %}{% else %}{% assign plink = pub.url | prepend: base_path %}{% endif %}
-          <article class="home-pub">
+          {% assign plink = pub.url | prepend: base_path %}
+          <article class="home-pub reveal" style="--i: {{ forloop.index0 }}">
             <div class="home-venue">{{ pub.venue_short | default: pub.venue }}<span class="yr">{{ pub.date | date: "%Y" }}</span></div>
             <div>
               <a class="home-pub__title" href="{{ plink }}">{{ pub.title }}</a>
@@ -96,14 +147,15 @@ layout: default
 
   <!-- ============================ NEWS ============================ -->
   {% if page.news %}
-  <section class="home-section">
+  <section class="home-section home-section--tint">
     <div class="home-wrap">
       <div class="home-section__head"><h2>News</h2><span class="home-label">Recent activity</span></div>
       <div class="home-timeline">
         {% for item in page.news %}
-        <div class="home-news">
+        <div class="home-news reveal" style="--i: {{ forloop.index0 | at_most: 5 }}">
           <div class="home-news__date">{{ item.date }}</div>
           <div class="home-news__text">{{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}</div>
+          {% if item.img %}<a class="home-news__img" href="{{ item.img | append: '.webp' | prepend: '/images/' | prepend: base_path }}" data-viewer data-viewer-title="{{ item.img_alt | escape }}"><img src="{{ item.img | append: '-thumb.webp' | prepend: '/images/' | prepend: base_path }}" alt="{{ item.img_alt | escape }}" loading="lazy"></a>{% endif %}
         </div>
         {% endfor %}
       </div>
@@ -111,8 +163,8 @@ layout: default
   </section>
   {% endif %}
 
-  <!-- ====================== RESEARCH INTERESTS ==================== -->
-  {% if page.interests %}
+  <!-- ============ RESEARCH INTERESTS (fallback when no research cards) ============ -->
+  {% if page.interests and page.research == nil %}
   <section class="home-section home-section--tint">
     <div class="home-wrap">
       <div class="home-section__head"><h2>Research Interests</h2><span class="home-label">Control &middot; Optimization &middot; Decision-making</span></div>
@@ -123,12 +175,22 @@ layout: default
   </section>
   {% endif %}
 
+  <!-- ======================== COMMUNITY & LIFE ===================== -->
+  {% if page.gallery %}
+  <section class="home-section">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>Community &amp; Life</h2><span class="home-label">Conferences &middot; Labs &middot; Bay Area</span></div>
+      {% include photo-grid.html photos=page.gallery feature=true %}
+    </div>
+  </section>
+  {% endif %}
+
   <!-- ==================== AFFILIATIONS / SPONSORS ================= -->
   {% if page.logos %}
   <section class="home-section">
     <div class="home-wrap">
       <div class="home-section__head"><h2>Affiliations &amp; Sponsorship</h2></div>
-      <div class="home-logos">
+      <div class="home-logos reveal">
         {% for logo in page.logos %}
         <a href="{{ logo.url }}" aria-label="{{ logo.name }}"><img src="{{ logo.img | prepend: '/images/' | prepend: base_path }}" alt="{{ logo.name }} logo" loading="lazy"></a>
         {% endfor %}
@@ -139,7 +201,7 @@ layout: default
 
   <!-- =========================== CONTACT ========================== -->
   <section class="home-section--tint">
-    <div class="home-wrap home-contact">
+    <div class="home-wrap home-contact reveal">
       <h2>Let&rsquo;s collaborate</h2>
       <p>{{ page.contact_text | default: "I'm always glad to discuss research in reinforcement learning, neuro-symbolic AI, and large language models. Feel free to reach out any time." }}</p>
       <div class="home-cta">
@@ -152,3 +214,6 @@ layout: default
   </section>
 
 </div>
+
+<script defer src="{{ base_path }}/assets/js/hero-sim.js"></script>
+<script defer src="{{ base_path }}/assets/js/research-anim.js"></script>

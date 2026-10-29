@@ -1,0 +1,14 @@
+{% comment %}
+  Link chips for a publication. Params: pub (the publication document), details (true to add a Details chip)
+{% endcomment %}
+{% include base_path %}
+{% assign p = include.pub %}
+<div class="pub-card__actions">
+  {% if p.paperurl %}<a class="pub-chip pub-chip--primary" href="{{ p.paperurl }}"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
+  {% if p.arxiv and p.arxiv != p.paperurl %}<a class="pub-chip" href="{{ p.arxiv }}"><i class="ai ai-arxiv" aria-hidden="true"></i> arXiv</a>{% endif %}
+  {% if p.codeurl %}<a class="pub-chip" href="{{ p.codeurl }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+  {% if p.talk %}<a class="pub-chip" href="{{ base_path }}{{ p.talk }}"><i class="fas fa-fw fa-image" aria-hidden="true"></i> Poster</a>{% endif %}
+  {% if p.slidesurl %}<a class="pub-chip" href="{% unless p.slidesurl contains '://' %}{{ base_path }}{% endunless %}{{ p.slidesurl }}"><i class="fas fa-fw fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
+  {% if p.videourl %}<a class="pub-chip" href="{% unless p.videourl contains '://' %}{{ base_path }}{% endunless %}{{ p.videourl }}"><i class="fas fa-fw fa-circle-play" aria-hidden="true"></i> Video</a>{% endif %}
+  {% if include.details %}<a class="pub-chip" href="{{ p.url | prepend: base_path }}"><i class="fas fa-fw fa-circle-info" aria-hidden="true"></i> Details</a>{% endif %}
+</div>

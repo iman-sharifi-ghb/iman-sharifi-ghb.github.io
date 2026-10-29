@@ -1,0 +1,12 @@
+{% comment %}
+  Author line with the site owner in bold.
+  Params: authors (comma-separated string), limit (optional; longer lists end in "et al.")
+{% endcomment %}
+{% assign me = '<strong>' | append: site.author.name | append: '</strong>' %}
+{% assign al = include.authors | split: ', ' %}
+{% if include.limit and al.size > include.limit %}
+  {% assign shown = al | slice: 0, include.limit | join: ', ' | append: ', et al.' %}
+{% else %}
+  {% assign shown = include.authors %}
+{% endif %}
+{{ shown | replace: site.author.name, me }}

@@ -6,14 +6,14 @@
 /* Palette - light */
 $ink            : #0f1b2d;   // primary text (deep airspace navy)
 $ink-soft       : #46566b;   // secondary text (slate)
-$ink-faint      : #7f8ea0;   // captions / meta
+$ink-faint      : #5f6e80;   // captions / meta (5.2:1 on white, AA)
 $ground         : #eff3f7;   // page background (cool chart paper)
 $ground-2       : #e4eaf0;   // strips, footer, code bg
 $surface        : #ffffff;   // cards
 $line           : #d2dae3;   // hairlines
 $line-strong    : #bac6d2;   // stronger borders
-$accent         : #e4572e;   // signal orange
-$accent-deep    : #be3f1d;   // hover / pressed
+$accent         : #c2410c;   // signal orange (5.2:1 on white, AA)
+$accent-deep    : #9a3412;   // hover / pressed
 
 /* Semantic colors used by notices / alerts (kept from base template) */
 $danger-color               : #ee5f5b;
@@ -62,8 +62,8 @@ $sidebar-screen-min-width   : 1024px;
     --accent                            : #{$accent};
     --accent-deep                       : #{$accent-deep};
     --accent-contrast                   : #ffffff;
-    --accent-wash                       : rgba(228, 87, 46, 0.10);
-    --accent-border                     : rgba(228, 87, 46, 0.30);
+    --accent-wash                       : rgba(194, 65, 12, 0.10);
+    --accent-border                     : rgba(194, 65, 12, 0.30);
     --card-shadow                       : #{$box-shadow};
     --font-mono                         : #{$monospace};
 }

@@ -3,6 +3,7 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+topics: ["Neuro-Symbolic AI", "Reinforcement Learning", "LLMs", "Drones & Air Mobility", "Autonomous Driving", "Surveys"]
 ---
 
 {% include base_path %}
@@ -10,6 +11,16 @@ author_profile: true
 <p class="pub-intro">
   {% if site.author.googlescholar %}A complete and up-to-date list is also available on my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.{% endif %}
 </p>
+
+{% comment %}Topic filter: hidden until site-extras.js enables it, so the page works without JavaScript{% endcomment %}
+<div class="pub-filter" role="group" aria-label="Filter publications by topic" hidden>
+  <button type="button" class="pub-filter__btn" data-topic="" aria-pressed="true">All <span class="pub-filter__n">{{ site.publications | size }}</span></button>
+  {% for t in page.topics %}
+    {% assign n = site.publications | where_exp: "p", "p.topics contains t" | size %}
+    {% if n > 0 %}<button type="button" class="pub-filter__btn" data-topic="{{ t }}" aria-pressed="false">{{ t }} <span class="pub-filter__n">{{ n }}</span></button>{% endif %}
+  {% endfor %}
+</div>
+<p class="pub-filter__status" aria-live="polite"></p>
 
 {% if site.publication_category %}
   {% for category in site.publication_category %}
@@ -22,50 +33,14 @@ author_profile: true
           <span class="pub-group__count">{{ posts.size }}</span>
         </div>
         <div class="pub-list">
-          {% for post in posts %}
-            {% if post.paperurl %}{% assign titlelink = post.paperurl %}{% else %}{% assign titlelink = post.url | prepend: base_path %}{% endif %}
-            <article class="pub-card">
-              <div class="pub-card__badge">
-                <span class="pub-card__venue">{{ post.venue_short | default: post.venue }}</span>
-                <span class="pub-card__year">{{ post.date | date: "%Y" }}</span>
-              </div>
-              <div class="pub-card__main">
-                <h3 class="pub-card__title"><a href="{{ titlelink }}">{{ post.title }}</a></h3>
-                {% if post.venue %}<div class="pub-card__venue-full">{{ post.venue }}</div>{% endif %}
-                {% if post.excerpt %}<p class="pub-card__desc">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
-                <div class="pub-card__actions">
-                  {% if post.paperurl %}<a class="pub-chip pub-chip--primary" href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
-                  {% if post.slidesurl %}<a class="pub-chip" href="{{ post.slidesurl }}"><i class="fas fa-fw fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
-                  <a class="pub-chip" href="{{ post.url | prepend: base_path }}"><i class="fas fa-fw fa-circle-info" aria-hidden="true"></i> Details</a>
-                </div>
-                {% if post.citation %}
-                <details class="pub-cite">
-                  <summary>Cite</summary>
-                  <p class="pub-cite__text">{{ post.citation }}</p>
-                </details>
-                {% endif %}
-              </div>
-            </article>
-          {% endfor %}
+          {% for post in posts %}{% include pub-card.html pub=post %}{% endfor %}
         </div>
       </section>
     {% endif %}
   {% endfor %}
 {% else %}
   <div class="pub-list">
-    {% for post in site.publications reversed %}
-      {% if post.paperurl %}{% assign titlelink = post.paperurl %}{% else %}{% assign titlelink = post.url | prepend: base_path %}{% endif %}
-      <article class="pub-card">
-        <div class="pub-card__badge">
-          <span class="pub-card__venue">{{ post.venue_short | default: post.venue }}</span>
-          <span class="pub-card__year">{{ post.date | date: "%Y" }}</span>
-        </div>
-        <div class="pub-card__main">
-          <h3 class="pub-card__title"><a href="{{ titlelink }}">{{ post.title }}</a></h3>
-          {% if post.venue %}<div class="pub-card__venue-full">{{ post.venue }}</div>{% endif %}
-          {% if post.excerpt %}<p class="pub-card__desc">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>{% endif %}
-        </div>
-      </article>
-    {% endfor %}
+    {% assign posts = site.publications | sort: "date" | reverse %}
+    {% for post in posts %}{% include pub-card.html pub=post %}{% endfor %}
   </div>
 {% endif %}
