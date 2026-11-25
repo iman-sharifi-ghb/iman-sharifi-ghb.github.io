@@ -27,8 +27,8 @@ demo:
   text: "Twenty package-delivery drones from two companies (multirotors and fixed-wing VTOLs) share the airspace over Frisco, Texas. Each fleet flies its own learned attention-based policy and keeps safe separation from both its own aircraft and the other fleet's."
   video: "demos/sep-home-loop.mp4"
   poster: "demos/sep-home-loop.webp"
-  alt: "Photorealistic 3D replay: a delivery drone lifts off from a vertiport and climbs over suburban Frisco, Texas, while a panel shows its policy action and attention over nearby aircraft."
-  note: "Policy decisions, positions, and speeds are replayed from BlueSky and rendered with Cesium 3D tiles; takeoff is illustrative."
+  alt: "Photorealistic 3D replay: a delivery drone takes off from a vertiport, flies its full route over suburban Frisco, Texas, and lands, while a panel shows its policy action and attention over nearby aircraft."
+  note: "Policy decisions, positions, and speeds are replayed from BlueSky and rendered with Cesium 3D tiles; takeoff and landing are illustrative."
   stats:
     - label: "sUAS"
       value: "20"
