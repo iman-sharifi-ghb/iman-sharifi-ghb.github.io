@@ -90,6 +90,39 @@ layout: default
   </section>
   {% endif %}
 
+  <!-- ======================== FEATURED DEMO ======================= -->
+  {% if page.demo %}
+  {% assign d = page.demo %}
+  <section class="home-section home-section--screen">
+    <div class="home-wrap">
+      <div class="home-section__head"><h2>{{ d.heading | default: "Demo" }}</h2>{% if d.label %}<span class="home-label">{{ d.label }}</span>{% endif %}</div>
+      <div class="home-demo">
+        <figure class="home-demo__media reveal">
+          {% comment %}Muted loop; site-extras.js starts it only while on screen and leaves the controls for reduced motion / no JS{% endcomment %}
+          <video muted loop playsinline controls preload="none" data-autoplay width="1280" height="720" poster="{{ d.poster | prepend: '/images/' | prepend: base_path }}" aria-label="{{ d.alt | escape }}">
+            <source src="{{ d.video | prepend: '/images/' | prepend: base_path }}" type="video/mp4">
+          </video>
+          {% if d.note %}<figcaption>{{ d.note }}</figcaption>{% endif %}
+        </figure>
+        <div class="home-demo__copy reveal" style="--i: 1">
+          {% if d.eyebrow %}<p class="home-eyebrow">{{ d.eyebrow }}</p>{% endif %}
+          <h3>{{ d.title }}</h3>
+          <p>{{ d.text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+          {% if d.stats %}
+          <dl class="home-demo__stats">
+            {% for s in d.stats %}<div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>{% endfor %}
+          </dl>
+          {% endif %}
+          <div class="home-cta">
+            {% if d.link %}<a class="ibtn ibtn--primary" href="{{ base_path }}{{ d.link }}"><i class="fas fa-fw fa-circle-play" aria-hidden="true"></i> {{ d.link_text | default: "Watch the full demos" }}</a>{% endif %}
+            {% if d.paper %}<a class="ibtn" href="{{ d.paper }}"><i class="fas fa-fw fa-file-lines" aria-hidden="true"></i> Paper</a>{% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   <!-- ======================== RESEARCH THEMES ===================== -->
   {% if page.research %}
   <section class="home-section home-section--tint">

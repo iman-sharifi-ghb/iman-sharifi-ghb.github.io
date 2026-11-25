@@ -79,21 +79,24 @@
       reveals.forEach(function (el) { revealer.observe(el); });
     }
 
-    // Loop research clips only while on screen; never autoplay for reduced motion
-    var videos = document.querySelectorAll("video[autoplay]");
+    // Loop clips only while on screen; never autoplay for reduced motion.
+    // [data-autoplay] videos ship with preload="none" + controls, so nothing downloads
+    // until they scroll into view and no-JS visitors can still press play.
+    var videos = document.querySelectorAll("video[autoplay], video[data-autoplay]");
     if (videos.length) {
       var player = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) e.target.play().catch(function () {});
+          if (e.isIntersecting) e.target.play().catch(function () { e.target.controls = true; });
           else e.target.pause();
         });
-      });
+      }, { threshold: 0.25 });
       videos.forEach(function (v) {
         if (reduceMotion) {
           v.removeAttribute("autoplay");
           v.pause();
           v.controls = true;
         } else {
+          if (v.hasAttribute("data-autoplay")) v.controls = false;
           player.observe(v);
         }
       });

@@ -18,6 +18,29 @@ talk: "/talks/2025-10-16-nasa-uli-vanderbilt"
 topics: ["Reinforcement Learning", "Drones & Air Mobility"]
 teaser: "teasers/2026-heterogeneous-deconfliction-itsc.webp"
 teaser_alt: "BlueSky scenario over Frisco, Texas: two drone fleets (blue and orange) fly between waypoints and meet at a shared conflict point."
+# 3D replays shown under "3D demonstrations" (files in /images/demos/). The first one is shown large.
+demos_intro: >-
+  Photorealistic 3D replays of one evaluation episode (episode 35) over Frisco, Texas: 20 sUAS from two
+  companies, a multirotor fleet (CoA, blue) and a fixed-wing VTOL fleet (CoB, orange), each flying its own
+  learned attention-based PPOA2C policy. All 20 deliveries complete with zero collisions. Policy decisions,
+  positions, and speeds at 500 ft are replayed from the BlueSky simulation and rendered with Cesium 3D tiles;
+  takeoff and landing segments are illustrative.
+demos:
+  - title: "Airspace overview"
+    video: "demos/sep-overview.mp4"
+    poster: "demos/sep-overview.webp"
+    duration: "1:14"
+    text: "Both fleets fly across the city for the whole 11-minute episode, shown at 6× real time."
+  - title: "Following one drone (AC05)"
+    video: "demos/sep-follow-ac05.mp4"
+    poster: "demos/sep-follow-ac05.webp"
+    duration: "1:16"
+    text: "A chase camera rides along with one multirotor. The panel shows its policy action (decelerate, hold, accelerate) and how its attention is split across nearby intruders."
+  - title: "Shared intersection (WP9)"
+    video: "demos/sep-intersection-wp9.mp4"
+    poster: "demos/sep-intersection-wp9.webp"
+    duration: "0:48"
+    text: "Drones from both fleets meet at a shared waypoint, where intra- and inter-fleet conflicts have to be resolved."
 abstract: >-
   In the envisioned future dense urban airspace, multiple companies will operate heterogeneous fleets
   of small unmanned aerial systems (sUASs), where each fleet includes several homogeneous aircraft

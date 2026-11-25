@@ -10,5 +10,6 @@
   {% if p.talk %}<a class="pub-chip" href="{{ base_path }}{{ p.talk }}"><i class="fas fa-fw fa-image" aria-hidden="true"></i> Poster</a>{% endif %}
   {% if p.slidesurl %}<a class="pub-chip" href="{% unless p.slidesurl contains '://' %}{{ base_path }}{% endunless %}{{ p.slidesurl }}"><i class="fas fa-fw fa-display" aria-hidden="true"></i> Slides</a>{% endif %}
   {% if p.videourl %}<a class="pub-chip" href="{% unless p.videourl contains '://' %}{{ base_path }}{% endunless %}{{ p.videourl }}"><i class="fas fa-fw fa-circle-play" aria-hidden="true"></i> Video</a>{% endif %}
+  {% if p.demos %}<a class="pub-chip" href="{{ p.url | prepend: base_path }}#demos"><i class="fas fa-fw fa-cube" aria-hidden="true"></i> 3D Demos</a>{% endif %}
   {% if include.details %}<a class="pub-chip" href="{{ p.url | prepend: base_path }}"><i class="fas fa-fw fa-circle-info" aria-hidden="true"></i> Details</a>{% endif %}
 </div>

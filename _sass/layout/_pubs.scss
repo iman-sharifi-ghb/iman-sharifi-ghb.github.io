@@ -344,6 +344,54 @@
 }
 .pubd__cite { scroll-margin-top: 5rem; }
 
+/* 3D demonstration videos: first one full width, the rest two-up */
+#demos { scroll-margin-top: 5rem; }
+.pubd__demos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+.pubd__demo {
+  margin: 0;
+  padding: 0.6rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.pubd__demo.is-featured { grid-column: 1 / -1; }
+.pubd__demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  background: #0b0f14;
+}
+.pubd__demo figcaption {
+  margin-top: 0.6rem;
+  font-family: inherit;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+}
+.pubd__demo-title {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-weight: 650;
+  color: var(--ink);
+}
+.pubd__demo-dur {
+  margin-left: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--ink-faint);
+}
+@media (max-width: 640px) {
+  .pubd__demos { grid-template-columns: 1fr; }
+}
+
 /* ---------- Poster (talk pages) ---------- */
 .poster { margin: 1.6rem 0 0; }
 .poster__open {

@@ -590,3 +590,79 @@ a.home-pub__title:hover { color: var(--accent); text-decoration: none; }
 @media (max-width: 420px) {
   .home-eyebrow { font-size: 0.68rem; letter-spacing: 0.08em; }
 }
+
+/* ---------- Featured demo: a dark "screen" band in both themes ---------- */
+.home-section--screen {
+  /* Re-point the theme tokens so headings, buttons and labels read on dark */
+  --ink: #e7ecf3;
+  --ink-soft: #b4c0d0;
+  --ink-faint: #8d9cb0;
+  --line: #22303f;
+  --line-strong: #31445a;
+  --surface: #121d2c;
+  background: #0a111b;
+  color: var(--ink-soft);
+  border-block: 1px solid #22303f;
+}
+.home-demo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3.5vw, 2.6rem);
+  align-items: center;
+}
+.home-demo__media { margin: 0; }
+.home-demo__media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid var(--line-strong);
+  background: #05090f;
+  box-shadow: 0 18px 50px -20px rgba(0, 0, 0, 0.7);
+}
+.home-demo__media figcaption {
+  margin-top: 0.6rem;
+  font-family: inherit;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--ink-faint);
+}
+.home-demo__copy h3 {
+  margin: 0.5rem 0 0.7rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.home-demo__copy p { margin: 0 0 1.1rem; font-size: 0.97rem; line-height: 1.65; color: var(--ink-soft); }
+.home-demo__copy strong { color: var(--ink); }
+.home-demo__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0 0 1.3rem;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home-demo__stats div { background: var(--surface); padding: 0.7rem 0.85rem; }
+.home-demo__stats dt {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.home-demo__stats dd {
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.home-demo .home-cta { margin-top: 0; }
+@media (max-width: 900px) {
+  .home-demo { grid-template-columns: 1fr; }
+}

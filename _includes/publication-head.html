@@ -25,4 +25,24 @@
     <h2 class="pubd__h">Summary</h2>
     <p class="pubd__abstract">{{ page.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
   {% endif %}
+
+  {% if page.demos %}
+  {% comment %}Self-hosted MP4s; preload="none" so only the poster loads until the visitor presses play{% endcomment %}
+  <h2 class="pubd__h" id="demos">3D demonstrations</h2>
+  {% if page.demos_intro %}<p class="pubd__abstract">{{ page.demos_intro }}</p>{% endif %}
+  <div class="pubd__demos">
+    {% for d in page.demos %}
+    <figure class="pubd__demo{% if forloop.first %} is-featured{% endif %}">
+      <video controls playsinline muted preload="none" width="1920" height="1080" poster="{{ d.poster | prepend: '/images/' | prepend: base_path }}" aria-label="{{ d.title | escape }}">
+        <source src="{{ d.video | prepend: '/images/' | prepend: base_path }}" type="video/mp4">
+        <a href="{{ d.video | prepend: '/images/' | prepend: base_path }}">Download the video</a>
+      </video>
+      <figcaption>
+        <span class="pubd__demo-title">{{ d.title }}{% if d.duration %} <span class="pubd__demo-dur">{{ d.duration }}</span>{% endif %}</span>
+        {% if d.text %}{{ d.text }}{% endif %}
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+  {% endif %}
 </div>

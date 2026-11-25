@@ -16,7 +16,31 @@ affiliations:
   - name: "Stanford SISL"
     url: "https://sisl.stanford.edu/"
   - name: "NASA ULI"
-    url: "https://www.nasa.gov/"
+    url: "https://skysec.engineering.gwu.edu/"
+
+# Featured 3D demo, shown as a dark band between About and Research (files in /images/demos/).
+demo:
+  heading: "Demo"
+  label: "3D replay · IEEE ITSC 2026"
+  eyebrow: "Multi-Agent RL · Separation Assurance"
+  title: "Two drone fleets, one shared sky"
+  text: "Twenty package-delivery drones from two companies (multirotors and fixed-wing VTOLs) share the airspace over Frisco, Texas. Each fleet flies its own learned attention-based policy and keeps safe separation from both its own aircraft and the other fleet's."
+  video: "demos/sep-home-loop.mp4"
+  poster: "demos/sep-home-loop.webp"
+  alt: "Photorealistic 3D replay: a delivery drone lifts off from a vertiport and climbs over suburban Frisco, Texas, while a panel shows its policy action and attention over nearby aircraft."
+  note: "Policy decisions, positions, and speeds are replayed from BlueSky and rendered with Cesium 3D tiles; takeoff is illustrative."
+  stats:
+    - label: "sUAS"
+      value: "20"
+    - label: "Fleets"
+      value: "2"
+    - label: "Deliveries"
+      value: "20/20"
+    - label: "Collisions"
+      value: "0"
+  link: "/publication/2026-heterogeneous-deconfliction-itsc#demos"
+  link_text: "Watch all 3 demos"
+  paper: "https://arxiv.org/abs/2605.01041"
 
 # Research themes shown as cards. "topic" links to the filtered publication list.
 # To show a looping clip instead of the image, add  video: "research/clip.mp4"  (muted MP4/WebM in /images/).
@@ -52,6 +76,8 @@ research:
     topic: "Autonomous Driving"
 
 news:
+  - date: "2026 · 11"
+    text: "Released photorealistic **3D replays** of our multi-agent RL policies separating two heterogeneous drone fleets over Frisco, Texas. [Watch the demos](/publication/2026-heterogeneous-deconfliction-itsc#demos)."
   - date: "2026 · 09"
     text: "Presented our multi-agent RL work on separating heterogeneous drone fleets at **IEEE ITSC 2026** (Naples, Italy), online on Sep 16. [Watch the talk &amp; get the slides](/talks/2026-09-16-itsc-separation)."
   - date: "2026 · 09"
@@ -143,7 +169,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. Candidate in Mechanical and Aerospace Engineering at [George Washington University](https://www.gwu.edu/), Washington DC, USA, where my research lies at the intersection of control, optimization, and decision-making. In particular, I work on **multi-agent reinforcement learning**, **neuro-symbolic artificial intelligence**, and **large language models (LLMs)**. I am broadly interested in developing interpretable and verifiable AI systems for safety-critical applications such as unmanned aerial systems (UAS) traffic management (UTM), advanced air mobility (AAM), and autonomous driving. My current Ph.D. program is funded by the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) University Leadership Initiative (ULI).
+I am a Ph.D. Candidate in Mechanical and Aerospace Engineering at [George Washington University](https://www.gwu.edu/), Washington DC, USA, where my research lies at the intersection of control, optimization, and decision-making. In particular, I work on **multi-agent reinforcement learning**, **neuro-symbolic artificial intelligence**, and **large language models (LLMs)**. I am broadly interested in developing interpretable and verifiable AI systems for safety-critical applications such as unmanned aerial systems (UAS) traffic management (UTM), advanced air mobility (AAM), and autonomous driving. My Ph.D. is funded by the [National Aeronautics and Space Administration (NASA)](https://www.nasa.gov/) University Leadership Initiative (ULI) through **SkySec: Securing High-Density Urban Airspaces**, a project led by GWU with eight partner institutions. I also designed and built the project's website, [skysec.engineering.gwu.edu](https://skysec.engineering.gwu.edu/).
 
 Currently, I am a visiting student researcher in the [Stanford Intelligent Systems Laboratory (SISL)](https://sisl.stanford.edu/) at **Stanford University**, Department of Aeronautics and Astronautics, where I conduct research on safeguarding LLMs/VLMs using retrieval-augmented generation (RAG) in aviation applications. I have also conducted research as a visiting student researcher at the [Connected and Automated Vehicles Lab (CAV-Lab)](https://www.cav-lab.io/), University of Surrey, focusing on symbolic imitation learning and safe decision-making for autonomous vehicles using neuro-symbolic reinforcement learning in 2023.
 
